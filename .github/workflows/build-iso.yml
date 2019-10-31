@@ -1,0 +1,11 @@
+name: Build Unity XP ISO
+on: [push]
+jobs:
+  build:
+    name: Build ISO
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build
+        id: build
+        run: bash code/build.sh
+        shell: bash
