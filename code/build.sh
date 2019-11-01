@@ -1,5 +1,5 @@
 #!/bin/bash
-sudo apt install -y debootstrap xorriso
+sudo apt install -y debootstrap mtools xorriso
 sudo rm -rfv $HOME/Unity-XP;mkdir -pv $HOME/Unity-XP
 sudo debootstrap \
     --arch=amd64 \
@@ -29,17 +29,17 @@ sudo chroot $HOME/Unity-XP/chroot sh -c "dbus-uuidgen > /etc/machine-id"
 sudo chroot $HOME/Unity-XP/chroot ln -fs /etc/machine-id /var/lib/dbus/machine-id
 sudo chroot $HOME/Unity-XP/chroot dpkg-divert --local --rename --add /sbin/initctl
 sudo chroot $HOME/Unity-XP/chroot ln -s /bin/true /sbin/initctl
-echo 'Package: tcpdump
-Pin: release *
-Pin-Priority: -1
+#echo 'Package: tcpdump
+#Pin: release *
+#Pin-Priority: -1
 
-Package: tcpdump:i386
-Pin: release *
-Pin-Priority: -1
+#Package: tcpdump:i386
+#Pin: release *
+#Pin-Priority: -1
 
-Package: cron
-Pin: release *
-Pin-Priority: -1' | sudo tee $HOME/Unity-XP/chroot/etc/apt/preferences.d/blocked
+#Package: cron
+#Pin: release *
+#Pin-Priority: -1' | sudo tee $HOME/Unity-XP/chroot/etc/apt/preferences.d/blocked
 sudo chroot $HOME/Unity-XP/chroot sh -c "echo 'grub-pc grub-pc/install_devices_empty   boolean true' | debconf-set-selections"
 sudo chroot $HOME/Unity-XP/chroot sh -c "echo 'locales locales/locales_to_be_generated multiselect pt_BR.UTF-8 UTF-8' | debconf-set-selections"
 sudo chroot $HOME/Unity-XP/chroot sh -c "echo 'locales locales/default_environment_locale select pt_BR.UTF-8' | debconf-set-selections"
@@ -58,10 +58,9 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y \
     network-manager \
     os-prober \
     resolvconf \
-    ubuntu-minimal \
     ubuntu-standard \
     wireless-tools
-sudo rm -rfv $HOME/Unity-XP/chroot/etc/apt/preferences.d/blocked
+#sudo rm -rfv $HOME/Unity-XP/chroot/etc/apt/preferences.d/blocked
 sudo chroot $HOME/Unity-XP/chroot apt install -y --no-install-recommends \
     gnome-mpv \
     ubuntu-unity-desktop
@@ -91,6 +90,7 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y \
     network-manager-gnome \
     papirus-icon-theme \
     plymouth-theme-ubuntu-logo \
+    redshift-gtk \
     synaptic \
     telegram-desktop \
     tilix \
@@ -107,7 +107,7 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y \
     ubiquity-casper \
     ubiquity-frontend-gtk \
     ubiquity-slideshow-ubuntu
-sudo chroot $HOME/Unity-XP/chroot apt autoremove --purge -y eog geoclue-2.0 gnome-shell nautilus gnome-terminal info xterm
+sudo chroot $HOME/Unity-XP/chroot apt autoremove --purge -y eog gnome-shell nautilus gnome-terminal info xterm
 sudo chroot $HOME/Unity-XP/chroot sh -c "deborphan | xargs sudo apt autoremove --purge -y"
 sudo chroot $HOME/Unity-XP/chroot sh -c "deborphan | xargs sudo apt autoremove --purge -y"
 sudo chroot $HOME/Unity-XP/chroot sh -c "deborphan | xargs sudo apt autoremove --purge -y"
