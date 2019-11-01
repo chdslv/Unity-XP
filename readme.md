@@ -2,14 +2,13 @@ O **Unity XP** é um projeto de prova de conceito, que visa a possibilidade de u
 
 O sistema usa como _base_ o [**Ubuntu 19.10**](https://ubuntu.com) e o kernel é o [**Liquorix**](https://liquorix.net/).
 
-### Capturas de tela
-_**Desktop**_
+### Desktop
 ![desktop](https://raw.githubusercontent.com/rauldipeas/Unity-XP/master/screenshots/desktop.png)
 
-_**Epiphany(Web)**_
+### Epiphany(Web)
 ![epiphany](https://raw.githubusercontent.com/rauldipeas/Unity-XP/master/screenshots/epiphany.png)
 
-_**Tilix & Nemo**_
+### Tilix & Nemo
 ![tilix+nemo](https://raw.githubusercontent.com/rauldipeas/Unity-XP/master/screenshots/tilix+nemo.png)
 
 ### Características
