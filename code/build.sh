@@ -29,6 +29,13 @@ sudo chroot $HOME/Unity-XP/chroot sh -c "dbus-uuidgen > /etc/machine-id"
 sudo chroot $HOME/Unity-XP/chroot ln -fs /etc/machine-id /var/lib/dbus/machine-id
 sudo chroot $HOME/Unity-XP/chroot dpkg-divert --local --rename --add /sbin/initctl
 sudo chroot $HOME/Unity-XP/chroot ln -s /bin/true /sbin/initctl
+echo 'Package: tcpdump
+Pin: release *
+Pin-Priority: -1
+
+Package: tcpdump:i386
+Pin: release *
+Pin-Priority: -1' | sudo tee $HOME/Unity-XP/chroot/etc/apt/preferences.d/tcpdump
 sudo chroot $HOME/Unity-XP/chroot sh -c "echo 'grub-pc grub-pc/install_devices_empty   boolean true' | debconf-set-selections"
 sudo chroot $HOME/Unity-XP/chroot sh -c "echo 'locales locales/locales_to_be_generated multiselect pt_BR.UTF-8 UTF-8' | debconf-set-selections"
 sudo chroot $HOME/Unity-XP/chroot sh -c "echo 'locales locales/default_environment_locale select pt_BR.UTF-8' | debconf-set-selections"
@@ -49,12 +56,15 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y \
     resolvconf \
     ubuntu-standard \
     wireless-tools
+sudo rm -rfv $HOME/Unity-XP/chroot/etc/apt/preferences.d/tcpdump
 sudo chroot $HOME/Unity-XP/chroot apt install -y --no-install-recommends \
     gnome-mpv \
     ubuntu-unity-desktop
 sudo chroot $HOME/Unity-XP/chroot apt install -y \
     breeze-cursor-theme \
     compizconfig-settings-manager \
+    deluged \
+    deluge-gtk \
     epiphany-browser \
     fonts-ubuntu \
     gimp \
@@ -141,6 +151,35 @@ sudo sed -i '/casper/d' image/casper/filesystem.manifest-desktop
 sudo sed -i '/discover/d' image/casper/filesystem.manifest-desktop
 sudo sed -i '/laptop-detect/d' image/casper/filesystem.manifest-desktop
 sudo sed -i '/os-prober/d' image/casper/filesystem.manifest-desktop
+echo "apt-clone
+archdetect-deb
+cifs-utils
+cryptsetup
+cryptsetup-bin
+cryptsetup-initramfs
+cryptsetup-run
+dmeventd
+dmraid
+dpkg-repack
+finalrd
+gir1.2-timezonemap-1.0
+gir1.2-xkl-1.0
+kpartx
+kpartx-boot
+libaio1
+libdebian-installer4
+libdevmapper-event1.02.1
+libdmraid1.0.0.rc16
+liblvm2cmd2.03
+libreadline5
+libusb-0.1-4
+localechooser-data
+lvm2
+python3-icu
+python3-pam
+rdate
+thin-provisioning-tools
+user-setup" image/casper/filesystem.manifest-remove
 sudo mksquashfs chroot image/casper/filesystem.squashfs
 printf $(sudo du -sx --block-size=1 chroot | cut -f1) > image/casper/filesystem.size
 cat <<EOF > image/README.diskdefines
