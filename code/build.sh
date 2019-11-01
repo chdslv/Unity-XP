@@ -69,6 +69,7 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y \
     fonts-ubuntu \
     gimp \
     git \
+    gnome-screenshot \
     gnome-themes-extra \
     gthumb \
     indicator-application \
