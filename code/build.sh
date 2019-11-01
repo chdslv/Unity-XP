@@ -80,6 +80,7 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y \
     indicator-session \
     libreoffice-calc \
     libreoffice-draw \
+    libreoffice-gtk3 \
     libreoffice-impress \
     libreoffice-writer \
     nemo \
