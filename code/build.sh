@@ -91,7 +91,8 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y \
     synaptic \
     telegram-desktop \
     tilix \
-    timeshift
+    timeshift \
+    zram-config
 sudo chroot $HOME/Unity-XP/chroot sh -c "wget -qO- https://raw.githubusercontent.com/Bonandry/yaru-plus/master/install.sh | sh"
 sudo sed -i 's/Humanity/Papirus,Humanity/g' $HOME/Unity-XP/chroot/usr/share/icons/Yaru++/index.theme
 sudo sed -i 's/Humanity/Papirus-Dark,Humanity/g' $HOME/Unity-XP/chroot/usr/share/icons/Yaru++-Dark/index.theme
