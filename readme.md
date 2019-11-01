@@ -19,7 +19,7 @@ O sistema usa como _base_ o [**Ubuntu 19.10**](https://ubuntu.com) e o kernel é
  - `sysctl.conf` otimizado
  - **NVIDIA DRM** ativado por padrão
  - **NVIDIA Force Full Composite** ativado por padrão
- - Ambiente gráfico **Unity 7**
+ - Ambiente de desktop **Unity 7**
 
 ### Lista de programas inclusos:
  - CompizConfig Settings Manager
