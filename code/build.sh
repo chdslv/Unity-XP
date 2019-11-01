@@ -35,31 +35,26 @@ sudo chroot $HOME/Unity-XP/chroot sh -c "echo 'locales locales/default_environme
 sudo chroot $HOME/Unity-XP/chroot sh -c "echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections"
 sudo chroot $HOME/Unity-XP/chroot sh -c "echo 'resolvconf resolvconf/linkify-resolvconf boolean false' | debconf-set-selections"
 sudo chroot $HOME/Unity-XP/chroot apt install -y \
-    ubuntu-standard \
     casper \
-    lupin-casper \
     discover \
     laptop-detect \
-    os-prober \
-    network-manager \
-    resolvconf \
-    net-tools \
-    wireless-tools \
-    locales \
+    linux-firmware \
     linux-headers-liquorix-amd64 \
     linux-image-liquorix-amd64 \
-    linux-firmware \
-    xserver-xorg-input-all-hwe-18.04 \
-    xserver-xorg-input-synaptics-hwe-18.04 \
-    intel-microcode \
-    iucode-tool \
-    thermald \
-    amd64-microcode
+    locales \
+    lupin-casper \
+    net-tools \
+    network-manager \
+    os-prober \
+    resolvconf \
+    ubuntu-standard \
+    wireless-tools
 sudo chroot $HOME/Unity-XP/chroot apt install -y --no-install-recommends \
     gnome-mpv \
     ubuntu-unity-desktop
 sudo chroot $HOME/Unity-XP/chroot apt install -y \
     breeze-cursor-theme \
+    compizconfig-settings-manager \
     deluge-gtk \
     deluged \
     epiphany-browser \
@@ -80,14 +75,15 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y \
     tilix \
     timeshift
 sudo chroot $HOME/Unity-XP/chroot sh -c "wget -qO- https://raw.githubusercontent.com/Bonandry/yaru-plus/master/install.sh | sh"
-sudo chroot $HOME/Unity-XP/chroot sh -c "find /usr/share/icons/Yaru++* -name status -exec rm -rfv {} \;"
 sudo sed -i 's/Humanity/Papirus,Humanity/g' $HOME/Unity-XP/chroot/usr/share/icons/Yaru++/index.theme
 sudo sed -i 's/Humanity/Papirus-Dark,Humanity/g' $HOME/Unity-XP/chroot/usr/share/icons/Yaru++-Dark/index.theme
 sudo chroot $HOME/Unity-XP/chroot sh -c "git clone https://github.com/vinceliuice/vimix-gtk-themes;cd vimix-gtk-themes;./Install"
+sudo rm -rfv $HOME/Unity-XP/chroot/vimix-gtk-themes
 sudo chroot $HOME/Unity-XP/chroot apt install -y \
     ubiquity \
     ubiquity-casper \
-    ubiquity-frontend-gtk
+    ubiquity-frontend-gtk \
+    ubiquity-slideshow-ubuntu
 sudo chroot $HOME/Unity-XP/chroot apt autoremove --purge -y eog nautilus gnome-terminal info xterm
 sudo chroot $HOME/Unity-XP/chroot update-alternatives --set x-cursor-theme /etc/X11/cursors/Breeze_Snow.theme
 sudo chroot $HOME/Unity-XP/chroot apt dist-upgrade -y
