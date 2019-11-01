@@ -6,8 +6,8 @@ trigger:
   paths:
     exclude: [ readme.md ]
 steps:
-#  - script: sudo apt install -y cups-pk-helper geoclue-2.0 hplip initramfs-tools libnss-winbind lightdm samba ssl-cert winbind
-#    displayName: Preparação do sistema
+  - script: sudo apt install -y cups-pk-helper geoclue-2.0 hplip initramfs-tools libnss-winbind lightdm samba ssl-cert winbind
+    displayName: Preparação do sistema
   - script: bash code/build.sh
     displayName: Compilação da imagem de instalação
   - task: PublishBuildArtifacts@1
