@@ -2,8 +2,6 @@ O **Unity XP** é um projeto de prova de conceito, que visa a possibilidade de u
 
 O sistema usa como _base_ o [**Ubuntu 19.10**](https://ubuntu.com) e o kernel é o [**Liquorix**](https://liquorix.net/).
 
-![ubuntu-gif](https://raw.githubusercontent.com/rauldipeas/Unity-XP/master/ubuntu-logo.gif)
-
 _**Desktop**_
 ![desktop](https://raw.githubusercontent.com/rauldipeas/Unity-XP/master/screenshots/desktop.png)
 
@@ -24,3 +22,5 @@ bash code/build.sh
 Após a compilação, a imagem de instalação estará salva aqui: `~/Unity-XP/unity-xp-19.10-amd64.iso`
 
 O tempo de compilação pode variar, _**de acordo com a capacidade de processamento do seu hardware e a velocidade da sua internet**_, no meu notebook **IdeaPad-320** com processador **i7 7500U**, **8gb de RAM** e um **SSD**, usando uma conexão de **60mpbs**, demora em torno de _30 minutos_.
+
+![ubuntu-gif](https://raw.githubusercontent.com/rauldipeas/Unity-XP/master/ubuntu-logo.gif)
