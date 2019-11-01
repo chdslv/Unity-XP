@@ -116,12 +116,12 @@ sudo chroot $HOME/Unity-XP/chroot umount /dev/pts
 sudo chroot $HOME/Unity-XP/chroot sh -c "export HISTSIZE=0"
 sudo umount $HOME/Unity-XP/chroot/dev
 sudo umount $HOME/Unity-XP/chroot/run
-sudo cp -rfv settings/nvidia-drm.conf $HOME/Unity-XP/chroot/lib/modprobe.d/nvidia-drm.conf
-sudo cp -rfv settings/limits.conf $HOME/Unity-XP/chroot/etc/security/limits.d/rauldipeas.conf
-sudo cp -rfv settings/sysctl.conf $HOME/Unity-XP/chroot/etc/sysctl.d/rauldipeas.conf
-sudo cp -rfv settings/nvidia-composite.desktop $HOME/Unity-XP/chroot/etc/xdg/autostart/nvidia-composite.desktop
+sudo cp -rfv code/settings/nvidia-drm.conf $HOME/Unity-XP/chroot/lib/modprobe.d/nvidia-drm.conf
+sudo cp -rfv code/settings/limits.conf $HOME/Unity-XP/chroot/etc/security/limits.d/rauldipeas.conf
+sudo cp -rfv code/settings/sysctl.conf $HOME/Unity-XP/chroot/etc/sysctl.d/rauldipeas.conf
+sudo cp -rfv code/settings/nvidia-composite.desktop $HOME/Unity-XP/chroot/etc/xdg/autostart/nvidia-composite.desktop
 sudo mkdir -p $HOME/Unity-XP/chroot/etc/skel/.config/dconf
-sudo cp -rfv settings/user $HOME/Unity-XP/chroot/etc/skel/.config/dconf/user
+sudo cp -rfv code/settings/user $HOME/Unity-XP/chroot/etc/skel/.config/dconf/user
 #keyboard-indicator(off) #Yaru++-Dark(icons) #Vimix-Dark-Laptop-Ruby(gtk-theme) #Wallpaper(ubuntu-glitch-logo)
 sudo mkdir -p $HOME/Unity-XP/chroot/etc/X11/xorg.conf.d
 sudo sed -i 's/us/br/g' $HOME/Unity-XP/chroot/etc/default/keyboard
