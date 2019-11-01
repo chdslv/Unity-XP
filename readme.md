@@ -32,7 +32,7 @@ O sistema usa como _base_ o [**Ubuntu 19.10**](https://ubuntu.com) e o kernel é
  - LibreOffice
  - Nemo
  - Neofetch
- - RedShift-GTK
+ - Redshift-GTK
  - Synaptic
  - Telegram
  - Tilix
