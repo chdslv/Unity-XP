@@ -85,16 +85,14 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y \
 sudo chroot $HOME/Unity-XP/chroot sh -c "wget -qO- https://raw.githubusercontent.com/Bonandry/yaru-plus/master/install.sh | sh"
 sudo sed -i 's/Humanity/Papirus,Humanity/g' $HOME/Unity-XP/chroot/usr/share/icons/Yaru++/index.theme
 sudo sed -i 's/Humanity/Papirus-Dark,Humanity/g' $HOME/Unity-XP/chroot/usr/share/icons/Yaru++-Dark/index.theme
-#sudo chroot $HOME/Unity-XP/chroot sh -c "git clone https://github.com/vinceliuice/vimix-gtk-themes;cd vimix-gtk-themes;./Install"
-#sudo rm -rfv $HOME/Unity-XP/chroot/vimix-gtk-themes
-sudo chroot $HOME/Unity-XP/chroot sh -c "wget -c https://github.com/rauldipeas/Unity-XP/raw/master/resources/vimix-gtk-themes_18.04+20190503-0ubuntu1_all.deb"
-sudo chroot $HOME/Unity-XP/chroot sh -c "apt install -y ./vimix-gtk-themes*.deb;rm -rfv vimix-gtk-theme*.deb"
+sudo chroot $HOME/Unity-XP/chroot sh -c "git clone https://github.com/vinceliuice/vimix-gtk-themes;cd vimix-gtk-themes;./Install"
+sudo rm -rfv $HOME/Unity-XP/chroot/vimix-gtk-themes
 sudo chroot $HOME/Unity-XP/chroot apt install -y \
+    gparted \
     ubiquity \
     ubiquity-casper \
-    ubiquity-frontend-gtk
-sudo chroot $HOME/Unity-XP/chroot sh -c "wget -c https://github.com/rauldipeas/Unity-XP/raw/master/resources/ubiquity-slideshow-ubuntu_113_all.deb"
-sudo chroot $HOME/Unity-XP/chroot sh -c "apt install -y ./ubiquity-slideshow-ubuntu*.deb;rm -rfv ubiquity-slideshow-ubuntu*.deb"
+    ubiquity-frontend-gtk \
+    ubiquity-slideshow-ubuntu
 sudo chroot $HOME/Unity-XP/chroot apt autoremove --purge -y eog nautilus gnome-terminal info xterm
 sudo chroot $HOME/Unity-XP/chroot update-alternatives --set x-cursor-theme /etc/X11/cursors/Breeze_Snow.theme
 sudo chroot $HOME/Unity-XP/chroot apt dist-upgrade -y
@@ -118,15 +116,14 @@ sudo chroot $HOME/Unity-XP/chroot umount /dev/pts
 sudo chroot $HOME/Unity-XP/chroot sh -c "export HISTSIZE=0"
 sudo umount $HOME/Unity-XP/chroot/dev
 sudo umount $HOME/Unity-XP/chroot/run
-sudo cp -rfv settings/nvidia-drm.conf $HOME/Unity-XP/chroot/lib/modprobe.d/nvidia-drm.conf
-sudo cp -rfv settings/limits.conf $HOME/Unity-XP/chroot/etc/security/limits.d/rauldipeas.conf
-sudo cp -rfv settings/sysctl.conf $HOME/Unity-XP/chroot/etc/sysctl.d/rauldipeas.conf
-sudo cp -rfv settings/nvidia-composite.desktop $HOME/Unity-XP/chroot/etc/xdg/autostart/nvidia-composite.desktop
+sudo cp -rfv ./settings/nvidia-drm.conf $HOME/Unity-XP/chroot/lib/modprobe.d/nvidia-drm.conf
+sudo cp -rfv ./settings/limits.conf $HOME/Unity-XP/chroot/etc/security/limits.d/rauldipeas.conf
+sudo cp -rfv ./settings/sysctl.conf $HOME/Unity-XP/chroot/etc/sysctl.d/rauldipeas.conf
+sudo cp -rfv ./settings/nvidia-composite.desktop $HOME/Unity-XP/chroot/etc/xdg/autostart/nvidia-composite.desktop
 sudo mkdir -p $HOME/Unity-XP/chroot/etc/skel/.config/dconf
-sudo cp -rfv settings/user $HOME/Unity-XP/chroot/etc/skel/.config/dconf/user
+sudo cp -rfv ./settings/user $HOME/Unity-XP/chroot/etc/skel/.config/dconf/user
 #keyboard-indicator(off) #Yaru++-Dark(icons) #Vimix-Dark-Laptop-Ruby(gtk-theme) #Wallpaper(ubuntu-glitch-logo)
 sudo mkdir -p $HOME/Unity-XP/chroot/etc/X11/xorg.conf.d
-sudo cp -rfv settings/20-amd.conf $HOME/Unity-XP/chroot/etc/X11/xorg.conf.d/20-amd.conf
 sudo sed -i 's/us/br/g' $HOME/Unity-XP/chroot/etc/default/keyboard
 cd $HOME/Unity-XP
 mkdir -p image/{casper,isolinux,install}
@@ -167,6 +164,7 @@ dpkg-repack
 finalrd
 gir1.2-timezonemap-1.0
 gir1.2-xkl-1.0
+gparted
 kpartx
 kpartx-boot
 libaio1
