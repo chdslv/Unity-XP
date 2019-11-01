@@ -85,13 +85,16 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y \
 sudo chroot $HOME/Unity-XP/chroot sh -c "wget -qO- https://raw.githubusercontent.com/Bonandry/yaru-plus/master/install.sh | sh"
 sudo sed -i 's/Humanity/Papirus,Humanity/g' $HOME/Unity-XP/chroot/usr/share/icons/Yaru++/index.theme
 sudo sed -i 's/Humanity/Papirus-Dark,Humanity/g' $HOME/Unity-XP/chroot/usr/share/icons/Yaru++-Dark/index.theme
-sudo chroot $HOME/Unity-XP/chroot sh -c "git clone https://github.com/vinceliuice/vimix-gtk-themes;cd vimix-gtk-themes;./Install"
-sudo rm -rfv $HOME/Unity-XP/chroot/vimix-gtk-themes
+#sudo chroot $HOME/Unity-XP/chroot sh -c "git clone https://github.com/vinceliuice/vimix-gtk-themes;cd vimix-gtk-themes;./Install"
+#sudo rm -rfv $HOME/Unity-XP/chroot/vimix-gtk-themes
+sudo chroot $HOME/Unity-XP/chroot sh -c "wget -c https://github.com/rauldipeas/Unity-XP/raw/master/resources/vimix-gtk-themes_18.04+20190503-0ubuntu1_all.deb"
+sudo chroot $HOME/Unity-XP/chroot sh -c "apt install -y ./vimix-gtk-themes*.deb;rm -rfv vimix-gtk-theme*.deb"
 sudo chroot $HOME/Unity-XP/chroot apt install -y \
     ubiquity \
     ubiquity-casper \
-    ubiquity-frontend-gtk \
-    ubiquity-slideshow-ubuntu
+    ubiquity-frontend-gtk
+sudo chroot $HOME/Unity-XP/chroot sh -c "wget -c https://github.com/rauldipeas/Unity-XP/raw/master/resources/ubiquity-slideshow-ubuntu_113_all.deb"
+sudo chroot $HOME/Unity-XP/chroot sh -c "apt install -y ./ubiquity-slideshow-ubuntu*.deb;rm -rfv ubiquity-slideshow-ubuntu*.deb"
 sudo chroot $HOME/Unity-XP/chroot apt autoremove --purge -y eog nautilus gnome-terminal info xterm
 sudo chroot $HOME/Unity-XP/chroot update-alternatives --set x-cursor-theme /etc/X11/cursors/Breeze_Snow.theme
 sudo chroot $HOME/Unity-XP/chroot apt dist-upgrade -y
@@ -238,4 +241,4 @@ sudo xorriso \
       "." \
       /boot/grub/bios.img=isolinux/bios.img \
       /EFI/efiboot.img=isolinux/efiboot.img
-sudo apt autoremove --purge -y debootstrap libburn4 libisoburn1 libisofs6 libjte1 xorriso
+sudo apt autoremove --purge -y debootstrap libisoburn1 xorriso

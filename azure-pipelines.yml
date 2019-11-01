@@ -13,5 +13,5 @@ steps:
   - task: PublishBuildArtifacts@1
     displayName: Upload da imagem de instalação
     inputs:
-      pathtoPublish: Unity-XP/unity-xp-19.10-amd64.iso
+      pathtoPublish: /home/vsts/Unity-XP/unity-xp-19.10-amd64.iso
       artifactName: 'Unity XP ISO'
