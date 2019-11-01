@@ -11,7 +11,7 @@ _**Epiphany(Web)**_
 _**Tilix & Nemo**_
 ![tilix+nemo](https://raw.githubusercontent.com/rauldipeas/Unity-XP/master/screenshots/tilix+nemo.png)
 
-#### Características
+### Características
  - **Ubuntu 19.10**
  - Kernel **Liquorix**
  - **ZRAM**
@@ -20,7 +20,7 @@ _**Tilix & Nemo**_
  - **NVIDIA DRM** ativado por padrão
  - **NVIDIA Force Full Composite** ativado por padrão
 
-#### Lista de programas inclusos:
+### Lista de programas inclusos:
  - CompizConfig Settings Manager
  - Epiphany(Web)
  - Ferramenta de captura de tela do GNOME
@@ -36,7 +36,7 @@ _**Tilix & Nemo**_
  - Tilix
  - TimeShift
 
-#### Temas
+### Temas
   - Vimix(GTK)
   - Yaru++(icons)
   - Papirus(icons, inherits)
