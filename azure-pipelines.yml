@@ -1,12 +1,12 @@
 pool:
-  vmImage: 'ubuntu-16.04'
+  vmImage: 'ubuntu-18.04'
 trigger:
   branches:
     include: [ master ]
   paths:
     exclude: [ readme.md ]
 steps:
-  - script: sudo apt update;sudo apt install -y cups-pk-helper geoclue-2.0 grub-efi-amd64-bin hplip initramfs-tools libnss-winbind lightdm mtools samba ssl-cert winbind
+  - script: sudo apt update;sudo apt install -y grub-efi-amd64-bin mtools
     displayName: Preparação do sistema
   - script: bash code/build.sh
     displayName: Compilação da imagem de instalação
