@@ -63,8 +63,8 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y --no-install-recommends \
 sudo chroot $HOME/Unity-XP/chroot apt install -y \
     breeze-cursor-theme \
     compizconfig-settings-manager \
-    deluged \
-    deluge-gtk \
+    compiz-plugins-extra \
+    deborphan \
     epiphany-browser \
     fonts-ubuntu \
     gimp \
@@ -74,7 +74,12 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y \
     indicator-application \
     indicator-appmenu \
     indicator-session \
+    libreoffice-calc \
+    libreoffice-draw \
+    libreoffice-impress \
+    libreoffice-writer \
     nemo \
+    neofetch \
     network-manager-gnome \
     papirus-icon-theme \
     plymouth-theme-ubuntu-logo \
@@ -93,7 +98,10 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y \
     ubiquity-casper \
     ubiquity-frontend-gtk \
     ubiquity-slideshow-ubuntu
-sudo chroot $HOME/Unity-XP/chroot apt autoremove --purge -y eog nautilus gnome-terminal info xterm
+sudo chroot $HOME/Unity-XP/chroot apt autoremove --purge -y cron eog geoclue-2.0 gnome-shell nautilus gnome-terminal info xterm
+sudo chroot $HOME/Unity-XP/chroot sh -c "deborphan | xargs sudo apt autoremove --purge -y"
+sudo chroot $HOME/Unity-XP/chroot sh -c "deborphan | xargs sudo apt autoremove --purge -y"
+sudo chroot $HOME/Unity-XP/chroot sh -c "deborphan | xargs sudo apt autoremove --purge -y"
 sudo chroot $HOME/Unity-XP/chroot update-alternatives --set x-cursor-theme /etc/X11/cursors/Breeze_Snow.theme
 sudo chroot $HOME/Unity-XP/chroot apt dist-upgrade -y
 sudo chroot $HOME/Unity-XP/chroot apt install --reinstall resolvconf
@@ -116,6 +124,7 @@ sudo chroot $HOME/Unity-XP/chroot umount /dev/pts
 sudo chroot $HOME/Unity-XP/chroot sh -c "export HISTSIZE=0"
 sudo umount $HOME/Unity-XP/chroot/dev
 sudo umount $HOME/Unity-XP/chroot/run
+sudo sed -i 's/quiet splash/quiet splash loglevel=0 logo.nologo vt.global_cursor_default=0 mitigations=off/g' $HOME/Unity-XP/chroot/etc/default/grub
 sudo cp -rfv code/settings/nvidia-drm.conf $HOME/Unity-XP/chroot/lib/modprobe.d/nvidia-drm.conf
 sudo cp -rfv code/settings/limits.conf $HOME/Unity-XP/chroot/etc/security/limits.d/rauldipeas.conf
 sudo cp -rfv code/settings/sysctl.conf $HOME/Unity-XP/chroot/etc/sysctl.d/rauldipeas.conf
@@ -137,9 +146,9 @@ search --set=root --file /Ubuntu
 insmod all_video
 
 set default="0"
-set timeout=30
+set timeout=15
 
-menuentry "Iniciar o Ubuntu" {
+menuentry "Unity XP(live-mode)" {
    linux /casper/vmlinuz boot=casper quiet splash loglevel=0 logo.nologo vt.global_cursor_default=0 mitigations=off locale=pt_BR ---
    initrd /casper/initrd
 }
