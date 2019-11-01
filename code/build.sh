@@ -95,7 +95,7 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y \
     ubiquity-casper \
     ubiquity-frontend-gtk \
     ubiquity-slideshow-ubuntu
-sudo chroot $HOME/Unity-XP/chroot apt autoremove --purge -y eog gnome-shell nautilus gnome-terminal info xterm
+sudo chroot $HOME/Unity-XP/chroot apt autoremove --purge -y eog gnome-shell libreoffice-math nautilus gnome-terminal info xterm
 sudo chroot $HOME/Unity-XP/chroot sh -c "deborphan | xargs sudo apt autoremove --purge -y"
 sudo chroot $HOME/Unity-XP/chroot sh -c "deborphan | xargs sudo apt autoremove --purge -y"
 sudo chroot $HOME/Unity-XP/chroot sh -c "deborphan | xargs sudo apt autoremove --purge -y"
@@ -173,10 +173,14 @@ gparted
 kpartx
 kpartx-boot
 libaio1
+libatkmm-1.6-1v5
+libcairomm-1.0-1v5
 libdebian-installer4
 libdevmapper-event1.02.1
 libdmraid1.0.0.rc16
+libgtkmm-2.4-1v5
 liblvm2cmd2.03
+libpangomm-1.4-1v5
 libreadline5
 libusb-0.1-4
 localechooser-data
@@ -185,6 +189,11 @@ python3-icu
 python3-pam
 rdate
 thin-provisioning-tools
+ubiquity
+ubiquity-casper
+ubiquity-frontend-gtk
+ubiquity-slideshow-ubuntu
+ubiquity-ubuntu-artwork
 user-setup" | sudo tee image/casper/filesystem.manifest-remove
 sudo mksquashfs chroot image/casper/filesystem.squashfs
 printf $(sudo du -sx --block-size=1 chroot | cut -f1) > image/casper/filesystem.size
