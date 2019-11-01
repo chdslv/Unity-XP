@@ -29,17 +29,6 @@ sudo chroot $HOME/Unity-XP/chroot sh -c "dbus-uuidgen > /etc/machine-id"
 sudo chroot $HOME/Unity-XP/chroot ln -fs /etc/machine-id /var/lib/dbus/machine-id
 sudo chroot $HOME/Unity-XP/chroot dpkg-divert --local --rename --add /sbin/initctl
 sudo chroot $HOME/Unity-XP/chroot ln -s /bin/true /sbin/initctl
-#echo 'Package: tcpdump
-#Pin: release *
-#Pin-Priority: -1
-
-#Package: tcpdump:i386
-#Pin: release *
-#Pin-Priority: -1
-
-#Package: cron
-#Pin: release *
-#Pin-Priority: -1' | sudo tee $HOME/Unity-XP/chroot/etc/apt/preferences.d/blocked
 sudo chroot $HOME/Unity-XP/chroot sh -c "echo 'grub-pc grub-pc/install_devices_empty   boolean true' | debconf-set-selections"
 sudo chroot $HOME/Unity-XP/chroot sh -c "echo 'locales locales/locales_to_be_generated multiselect pt_BR.UTF-8 UTF-8' | debconf-set-selections"
 sudo chroot $HOME/Unity-XP/chroot sh -c "echo 'locales locales/default_environment_locale select pt_BR.UTF-8' | debconf-set-selections"
@@ -60,7 +49,6 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y \
     resolvconf \
     ubuntu-standard \
     wireless-tools
-#sudo rm -rfv $HOME/Unity-XP/chroot/etc/apt/preferences.d/blocked
 sudo chroot $HOME/Unity-XP/chroot apt install -y --no-install-recommends \
     gnome-mpv \
     ubuntu-unity-desktop
@@ -140,8 +128,7 @@ sudo cp -rfv code/settings/sysctl.conf $HOME/Unity-XP/chroot/etc/sysctl.d/rauldi
 sudo cp -rfv code/settings/nvidia-composite.desktop $HOME/Unity-XP/chroot/etc/xdg/autostart/nvidia-composite.desktop
 sudo mkdir -p $HOME/Unity-XP/chroot/etc/skel/.config/dconf
 sudo cp -rfv code/settings/user $HOME/Unity-XP/chroot/etc/skel/.config/dconf/user
-#keyboard-indicator(off) #Yaru++-Dark(icons) #Vimix-Dark-Laptop-Ruby(gtk-theme) #Wallpaper(ubuntu-glitch-logo)
-sudo mkdir -p $HOME/Unity-XP/chroot/etc/X11/xorg.conf.d
+#keyboard-indicator(off) #Yaru++-Dark(icons) #vimix-dark-laptop-ruby(gtk-theme) #Breeze(cursor) #Wallpaper(ubuntu-glitch-logo)
 sudo sed -i 's/us/br/g' $HOME/Unity-XP/chroot/etc/default/keyboard
 cd $HOME/Unity-XP
 mkdir -p image/{casper,isolinux,install}

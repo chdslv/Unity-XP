@@ -6,8 +6,6 @@ trigger:
   paths:
     exclude: [ readme.md ]
 steps:
-#  - script: sudo apt update;sudo apt install -y grub-efi-amd64-bin mtools
-#    displayName: Preparação do sistema
   - script: bash code/build.sh
     displayName: Compilação da imagem de instalação
   - task: PublishBuildArtifacts@1
