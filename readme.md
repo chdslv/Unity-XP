@@ -29,7 +29,7 @@ O sistema usa como _base_ o [**Ubuntu 19.10**](https://ubuntu.com) e o kernel é
  - GNOME MPV
  - GNOME Uso
  - gThumb
- - LibreOffice
+ - LibreOffice(Calc, Draw, Impress e Writer)
  - Nemo
  - Neofetch
  - Redshift GTK
