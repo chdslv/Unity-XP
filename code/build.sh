@@ -35,7 +35,11 @@ Pin-Priority: -1
 
 Package: tcpdump:i386
 Pin: release *
-Pin-Priority: -1' | sudo tee $HOME/Unity-XP/chroot/etc/apt/preferences.d/tcpdump
+Pin-Priority: -1
+
+Package: cron
+Pin: release *
+Pin-Priority: -1' | sudo tee $HOME/Unity-XP/chroot/etc/apt/preferences.d/blocked
 sudo chroot $HOME/Unity-XP/chroot sh -c "echo 'grub-pc grub-pc/install_devices_empty   boolean true' | debconf-set-selections"
 sudo chroot $HOME/Unity-XP/chroot sh -c "echo 'locales locales/locales_to_be_generated multiselect pt_BR.UTF-8 UTF-8' | debconf-set-selections"
 sudo chroot $HOME/Unity-XP/chroot sh -c "echo 'locales locales/default_environment_locale select pt_BR.UTF-8' | debconf-set-selections"
@@ -57,12 +61,11 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y \
     ubuntu-minimal \
     ubuntu-standard \
     wireless-tools
-sudo rm -rfv $HOME/Unity-XP/chroot/etc/apt/preferences.d/tcpdump
+sudo rm -rfv $HOME/Unity-XP/chroot/etc/apt/preferences.d/blocked
 sudo chroot $HOME/Unity-XP/chroot apt install -y --no-install-recommends \
     gnome-mpv \
     ubuntu-unity-desktop
 sudo chroot $HOME/Unity-XP/chroot apt install -y \
-    apt-utils \
     breeze-cursor-theme \
     compizconfig-settings-manager \
     compiz-plugins-extra \
@@ -104,7 +107,7 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y \
     ubiquity-casper \
     ubiquity-frontend-gtk \
     ubiquity-slideshow-ubuntu
-sudo chroot $HOME/Unity-XP/chroot apt autoremove --purge -y cron eog geoclue-2.0 gnome-shell nautilus gnome-terminal info xterm
+sudo chroot $HOME/Unity-XP/chroot apt autoremove --purge -y eog geoclue-2.0 gnome-shell nautilus gnome-terminal info xterm
 sudo chroot $HOME/Unity-XP/chroot sh -c "deborphan | xargs sudo apt autoremove --purge -y"
 sudo chroot $HOME/Unity-XP/chroot sh -c "deborphan | xargs sudo apt autoremove --purge -y"
 sudo chroot $HOME/Unity-XP/chroot sh -c "deborphan | xargs sudo apt autoremove --purge -y"
