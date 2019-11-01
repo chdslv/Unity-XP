@@ -55,8 +55,6 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y --no-install-recommends \
 sudo chroot $HOME/Unity-XP/chroot apt install -y \
     breeze-cursor-theme \
     compizconfig-settings-manager \
-    deluge-gtk \
-    deluged \
     epiphany-browser \
     fonts-ubuntu \
     gimp \
