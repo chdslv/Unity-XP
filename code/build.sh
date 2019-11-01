@@ -54,6 +54,7 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y \
     network-manager \
     os-prober \
     resolvconf \
+    ubuntu-minimal \
     ubuntu-standard \
     wireless-tools
 sudo rm -rfv $HOME/Unity-XP/chroot/etc/apt/preferences.d/tcpdump
@@ -61,6 +62,7 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y --no-install-recommends \
     gnome-mpv \
     ubuntu-unity-desktop
 sudo chroot $HOME/Unity-XP/chroot apt install -y \
+    apt-utils \
     breeze-cursor-theme \
     compizconfig-settings-manager \
     compiz-plugins-extra \
@@ -71,6 +73,7 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y \
     git \
     gnome-screenshot \
     gnome-themes-extra \
+    gnome-usage \
     gthumb \
     indicator-application \
     indicator-appmenu \
@@ -249,4 +252,4 @@ sudo xorriso \
       "." \
       /boot/grub/bios.img=isolinux/bios.img \
       /EFI/efiboot.img=isolinux/efiboot.img
-sudo apt autoremove --purge -y debootstrap libisoburn1 xorriso
+#sudo apt autoremove --purge -y debootstrap libisoburn1 xorriso
