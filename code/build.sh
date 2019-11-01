@@ -179,7 +179,7 @@ python3-icu
 python3-pam
 rdate
 thin-provisioning-tools
-user-setup" image/casper/filesystem.manifest-remove
+user-setup" | sudo tee image/casper/filesystem.manifest-remove
 sudo mksquashfs chroot image/casper/filesystem.squashfs
 printf $(sudo du -sx --block-size=1 chroot | cut -f1) > image/casper/filesystem.size
 cat <<EOF > image/README.diskdefines
