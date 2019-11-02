@@ -79,6 +79,7 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y \
     network-manager-gnome \
     papirus-icon-theme \
     plymouth-theme-ubuntu-logo \
+    rawtherapee \
     redshift-gtk \
     synaptic \
     telegram-desktop \

@@ -33,6 +33,7 @@ O sistema usa como _base_ o [**Ubuntu 19.10**](https://ubuntu.com) e o kernel é
  - [LibreOffice(Calc, Draw, Impress e Writer)](https://pt-br.libreoffice.org/)
  - [Nemo](https://en.wikipedia.org/wiki/Nemo_%28file_manager%29)
  - [Neofetch](https://github.com/dylanaraps/neofetch)
+ - [RawTherapee](https://rawtherapee.com/)
  - [Redshift GTK](http://jonls.dk/redshift/)
  - [Synaptic](http://www.nongnu.org/synaptic/)
  - [Telegram](https://telegram.org/)
