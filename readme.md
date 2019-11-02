@@ -2,7 +2,7 @@ O **Unity XP** é um projeto de prova de conceito, que visa a possibilidade de u
 
 O sistema usa como _base_ o [**Ubuntu 19.10**](https://ubuntu.com) e o kernel é o [**Liquorix**](https://liquorix.net/).
 
-[![**downlad**](resources/quick-download-media-file-image.png)](https://github.com/rauldipeas/Unity-XP/releases)
+[![**downlad**](resources/download.png)](https://github.com/rauldipeas/Unity-XP/releases)
 
 
 ### Área de trabalho
