@@ -260,4 +260,3 @@ sudo xorriso \
       "." \
       /boot/grub/bios.img=isolinux/bios.img \
       /EFI/efiboot.img=isolinux/efiboot.img
-#sudo apt autoremove --purge -y debootstrap libisoburn1 xorriso

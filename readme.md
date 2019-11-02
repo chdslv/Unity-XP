@@ -2,14 +2,17 @@ O **Unity XP** é um projeto de prova de conceito, que visa a possibilidade de u
 
 O sistema usa como _base_ o [**Ubuntu 19.10**](https://ubuntu.com) e o kernel é o [**Liquorix**](https://liquorix.net/).
 
+[![**downlad**](resources/quick-download-media-file-image.png)](https://github.com/rauldipeas/Unity-XP/releases).
+
+
 ### Área de trabalho
-![desktop](https://raw.githubusercontent.com/rauldipeas/Unity-XP/master/screenshots/desktop.png)
+![desktop](screenshots/desktop.png)
 
 ### Epiphany(Web)
-![epiphany](https://raw.githubusercontent.com/rauldipeas/Unity-XP/master/screenshots/epiphany.png)
+![epiphany](screenshots/epiphany.png)
 
 ### Tilix & Nemo
-![tilix+nemo](https://raw.githubusercontent.com/rauldipeas/Unity-XP/master/screenshots/tilix+nemo.png)
+![tilix+nemo](screenshots/tilix+nemo.png)
 
 ### Características
  - [**Ubuntu 19.10**](https://ubuntu.com)
@@ -48,7 +51,7 @@ O sistema usa como _base_ o [**Ubuntu 19.10**](https://ubuntu.com) e o kernel é
   - [Papirus(icons, inherits)](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme/)
   - [Breeze(Cursor)](https://github.com/KDE/breeze)
 
-No momento, _**não há a possibilidade de disponibilizar uma imagem de instalação**_, porém, você pode _compilar uma por sua conta e risco_, usando os comandos _abaixo_:
+~~No momento, _**não há a possibilidade de disponibilizar uma imagem de instalação**_, porém,~~ você pode _compilar a imagem por sua conta e risco_, usando os comandos _abaixo_:
 
 ```bash
 git clone https://github.com/rauldipeas/Unity-XP

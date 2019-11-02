@@ -5,11 +5,15 @@ trigger:
     include: [ master ]
   paths:
     exclude: [ readme.md ]
+variables:
+  - group: GitHub
 steps:
   - script: bash code/build.sh
     displayName: Compilação da imagem de instalação
   - task: PublishBuildArtifacts@1
-    displayName: Upload da imagem de instalação
+    displayName: Upload da imagem de instalação para o Azure Pipeline Artifacts
     inputs:
       pathtoPublish: /home/vsts/Unity-XP/unity-xp-19.10-amd64.iso
       artifactName: 'Unity XP ISO'
+  - script: bash github-release.sh
+    displayName: Upload da imagem de instalação para o GitHub Releases
