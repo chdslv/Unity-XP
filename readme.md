@@ -1,4 +1,4 @@
-O **Unity XP** é um projeto de prova de conceito, que visa a possibilidade de usar o ambiente gráfico _**Unity**_ na última versão disponível do _**Ubuntu**_.
+O **Unity XP** é um projeto de prova de conceito, que visa a possibilidade de usar o ambiente gráfico [**Unity**](https://en.wikipedia.org/wiki/Unity_%28user_interface%29) na última versão disponível do _**Ubuntu**_.
 
 O sistema usa como _base_ o [**Ubuntu 19.10**](https://ubuntu.com) e o kernel é o [**Liquorix**](https://liquorix.net/).
 
@@ -12,37 +12,37 @@ O sistema usa como _base_ o [**Ubuntu 19.10**](https://ubuntu.com) e o kernel é
 ![tilix+nemo](https://raw.githubusercontent.com/rauldipeas/Unity-XP/master/screenshots/tilix+nemo.png)
 
 ### Características
- - **Ubuntu 19.10**
- - Kernel **Liquorix**
- - **ZRAM**
- - `limits.conf` otimizado
- - `sysctl.conf` otimizado
- - **NVIDIA DRM** ativado por padrão
- - **NVIDIA Force Full Composite** ativado por padrão
- - Ambiente de desktop **Unity 7**
+ - [**Ubuntu 19.10**](https://ubuntu.com)
+ - Kernel [**Liquorix**](https://liquorix.net/)
+ - [**ZRAM**](https://en.wikipedia.org/wiki/Zram)
+ - [`limits.conf`](https://github.com/rauldipeas/Unity-XP/blob/master/code/settings/limits.conf) otimizado
+ - [`sysctl.conf`](https://github.com/rauldipeas/Unity-XP/blob/master/code/settings/sysctl.conf) otimizado
+ - [**NVIDIA DRM**](https://github.com/rauldipeas/Unity-XP/blob/master/code/settings/nvidia-drm.conf) ativado por padrão
+ - [**NVIDIA Force Full Composite**](https://github.com/rauldipeas/Unity-XP/blob/master/code/settings/nvidia-composite.desktop) ativado por padrão
+ - Ambiente de desktop [**Unity 7**](https://en.wikipedia.org/wiki/Unity_%28user_interface%29)
 
 ### Lista de programas inclusos:
- - CompizConfig Settings Manager
- - Epiphany(Web)
- - Ferramenta de captura de tela do GNOME
- - GIMP
- - GNOME MPV
- - GNOME Uso
- - gThumb
- - LibreOffice(Calc, Draw, Impress e Writer)
- - Nemo
- - Neofetch
- - Redshift GTK
- - Synaptic
- - Telegram
- - Tilix
- - TimeShift
+ - [CompizConfig Settings Manager](https://en.wikipedia.org/wiki/Compiz)
+ - [Epiphany(Web)](https://wiki.gnome.org/Apps/Web)
+ - [Ferramenta de captura de tela do GNOME](https://en.wikipedia.org/wiki/GNOME_Screenshot)
+ - [GIMP](https://www.gimp.org/)
+ - [GNOME MPV](https://celluloid-player.github.io/)
+ - [GNOME Uso](https://wiki.gnome.org/Apps/Usage)
+ - [gThumb](https://wiki.gnome.org/Apps/Gthumb)
+ - [LibreOffice(Calc, Draw, Impress e Writer)](https://pt-br.libreoffice.org/)
+ - [Nemo](https://en.wikipedia.org/wiki/Nemo_%28file_manager%29)
+ - [Neofetch](https://github.com/dylanaraps/neofetch)
+ - [Redshift GTK](http://jonls.dk/redshift/)
+ - [Synaptic](http://www.nongnu.org/synaptic/)
+ - [Telegram](https://telegram.org/)
+ - [Tilix](https://gnunn1.github.io/tilix-web/)
+ - [TimeShift](https://teejeetech.in/timeshift/)
 
 ### Temas
-  - Vimix(GTK)
-  - Yaru++(icons)
-  - Papirus(icons, inherits)
-  - Breeze(Cursor)
+  - [Vimix(GTK)](https://vinceliuice.github.io/theme-vimix.html)
+  - [Yaru++(icons)](https://github.com/Bonandry/yaru-plus)
+  - [Papirus(icons, inherits)](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme/)
+  - [Breeze(Cursor)](https://github.com/KDE/breeze)
 
 No momento, _**não há a possibilidade de disponibilizar uma imagem de instalação**_, porém, você pode _compilar uma por sua conta e risco_, usando os comandos _abaixo_:
 
