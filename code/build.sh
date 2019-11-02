@@ -59,6 +59,7 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y \
     deborphan \
     epiphany-browser \
     fonts-ubuntu \
+    gdebi \
     gimp \
     git \
     gnome-screenshot \

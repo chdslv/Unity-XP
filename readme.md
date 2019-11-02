@@ -25,6 +25,7 @@ O sistema usa como _base_ o [**Ubuntu 19.10**](https://ubuntu.com) e o kernel é
  - [CompizConfig Settings Manager](https://en.wikipedia.org/wiki/Compiz)
  - [Epiphany(Web)](https://wiki.gnome.org/Apps/Web)
  - [Ferramenta de captura de tela do GNOME](https://en.wikipedia.org/wiki/GNOME_Screenshot)
+ - [GDebI](https://launchpad.net/gdebi)
  - [GIMP](https://www.gimp.org/)
  - [GNOME MPV](https://celluloid-player.github.io/)
  - [GNOME Uso](https://wiki.gnome.org/Apps/Usage)
