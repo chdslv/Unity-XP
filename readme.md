@@ -29,7 +29,6 @@ O sistema usa como _base_ o [**Ubuntu 19.10**](https://ubuntu.com) e o kernel é
  - [GDebI](https://launchpad.net/gdebi)
  - [GIMP](https://www.gimp.org/)
  - [GNOME MPV](https://celluloid-player.github.io/)
- - [GNOME Uso](https://wiki.gnome.org/Apps/Usage)
  - [gThumb](https://wiki.gnome.org/Apps/Gthumb)
  - [LibreOffice(Calc, Draw, Impress e Writer)](https://pt-br.libreoffice.org/)
  - [Nemo](https://en.wikipedia.org/wiki/Nemo_%28file_manager%29)

@@ -65,7 +65,6 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y \
     git \
     gnome-screenshot \
     gnome-themes-extra \
-    gnome-usage \
     gthumb \
     indicator-application \
     indicator-appmenu \
