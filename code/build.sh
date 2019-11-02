@@ -167,6 +167,9 @@ dmeventd
 dmraid
 dpkg-repack
 finalrd
+gir1.2-json-1.0
+gir1.2-nm-1.0
+gir1.2-nma-1.0
 gir1.2-timezonemap-1.0
 gir1.2-xkl-1.0
 gparted
