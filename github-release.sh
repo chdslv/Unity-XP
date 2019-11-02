@@ -5,4 +5,4 @@ chmod +x -v github-release
  --commit "master"\
  --tag "$tag"\
  --github-repository "rauldipeas/Unity-XP"\
- --github-access-token "$GITHUB_ACCESS_TOKEN
+ --github-access-token "$GITHUB_ACCESS_TOKEN"
