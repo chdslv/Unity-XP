@@ -53,6 +53,7 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y --no-install-recommends \
     gnome-mpv \
     ubuntu-unity-desktop
 sudo chroot $HOME/Unity-XP/chroot apt install -y \
+    audacity \
     breeze-cursor-theme \
     compizconfig-settings-manager \
     compiz-plugins-extra \
@@ -77,6 +78,7 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y \
     nemo \
     neofetch \
     network-manager-gnome \
+    obs-studio \
     papirus-icon-theme \
     plymouth-theme-ubuntu-logo \
     rawtherapee \

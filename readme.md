@@ -22,6 +22,7 @@ O sistema usa como _base_ o [**Ubuntu 19.10**](https://ubuntu.com) e o kernel é
  - Ambiente de desktop [**Unity 7**](https://en.wikipedia.org/wiki/Unity_%28user_interface%29)
 
 ### Lista de programas inclusos:
+ - [Audacity](https://www.audacityteam.org/)
  - [CompizConfig Settings Manager](https://en.wikipedia.org/wiki/Compiz)
  - [Epiphany(Web)](https://wiki.gnome.org/Apps/Web)
  - [Ferramenta de captura de tela do GNOME](https://en.wikipedia.org/wiki/GNOME_Screenshot)
@@ -33,6 +34,7 @@ O sistema usa como _base_ o [**Ubuntu 19.10**](https://ubuntu.com) e o kernel é
  - [LibreOffice(Calc, Draw, Impress e Writer)](https://pt-br.libreoffice.org/)
  - [Nemo](https://en.wikipedia.org/wiki/Nemo_%28file_manager%29)
  - [Neofetch](https://github.com/dylanaraps/neofetch)
+ - [OBS Studio](https://obsproject.com/)
  - [RawTherapee](https://rawtherapee.com/)
  - [Redshift GTK](http://jonls.dk/redshift/)
  - [Synaptic](http://www.nongnu.org/synaptic/)
