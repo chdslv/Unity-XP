@@ -79,6 +79,7 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y \
     neofetch \
     network-manager-gnome \
     obs-studio \
+    olive-editor \
     papirus-icon-theme \
     plymouth-theme-ubuntu-logo \
     rawtherapee \

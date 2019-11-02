@@ -35,6 +35,7 @@ O sistema usa como _base_ o [**Ubuntu 19.10**](https://ubuntu.com) e o kernel é
  - [Nemo](https://en.wikipedia.org/wiki/Nemo_%28file_manager%29)
  - [Neofetch](https://github.com/dylanaraps/neofetch)
  - [OBS Studio](https://obsproject.com/)
+ - [Olive](https://www.olivevideoeditor.org/)
  - [RawTherapee](https://rawtherapee.com/)
  - [Redshift GTK](http://jonls.dk/redshift/)
  - [Synaptic](http://www.nongnu.org/synaptic/)
