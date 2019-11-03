@@ -14,6 +14,9 @@ O sistema usa como _base_ o [**Ubuntu 19.10**](https://ubuntu.com) e o kernel é
 ### Tilix & Nemo
 ![tilix+nemo](screenshots/tilix+nemo.png)
 
+### Applicativos
+![apps](screenshots/apps.png)
+
 ### Características
  - [**Ubuntu 19.10**](https://ubuntu.com)
  - Kernel [**Liquorix**](https://liquorix.net/)
