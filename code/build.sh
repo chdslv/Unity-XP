@@ -141,7 +141,7 @@ sudo mkdir -p $HOME/Unity-XP/chroot/etc/skel/.config/{dconf,Kvantum,qt5ct,olivev
 #keyboard-indicator(off) #Yaru++-Dark(icons) #vimix-dark-laptop-ruby(gtk-theme) #Breeze(cursor) #Wallpaper(ubuntu-glitch-logo)
 sudo cp -rfv code/settings/user $HOME/Unity-XP/chroot/etc/skel/.config/dconf/user
 sudo cp -rfv code/settings/kvantum.kvconfig $HOME/Unity-XP/chroot/etc/skel/.config/Kvantum/kvantum.kvconfig
-sudo cp -rfv code/settings/config.xml $HOME/Unity-XP/chroot/etc/skel/.config/qt5ct/olivevideoeditor.org/Olive/config.xml
+sudo cp -rfv code/settings/config.xml $HOME/Unity-XP/chroot/etc/skel/.config/olivevideoeditor.org/Olive/config.xml
 sudo cp -rfv code/settings/qt5ct.conf $HOME/Unity-XP/chroot/etc/skel/.config/qt5ct/qt5ct.conf
 sudo sed -i 's/us/br/g' $HOME/Unity-XP/chroot/etc/default/keyboard
 cd $HOME/Unity-XP
