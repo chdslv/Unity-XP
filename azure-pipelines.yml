@@ -4,7 +4,9 @@ trigger:
   branches:
     include: [ master ]
   paths:
-    exclude: [ readme.md ]
+    exclude:
+      - readme.md
+      - screenshots/*
 variables:
   - group: GitHub
 steps:
