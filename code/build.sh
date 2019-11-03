@@ -51,6 +51,9 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y \
     wireless-tools
 sudo chroot $HOME/Unity-XP/chroot apt install -y --no-install-recommends \
     gnome-mpv \
+    qt5ct \
+    qt5-style-kvantum \
+    qt5-style-kvantum-l10n \
     ubuntu-unity-desktop
 sudo chroot $HOME/Unity-XP/chroot apt install -y \
     audacity \
@@ -58,6 +61,8 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y \
     compizconfig-settings-manager \
     compiz-plugins-extra \
     deborphan \
+    deluged \
+    deluge-gtk \
     epiphany-browser \
     fonts-ubuntu \
     gdebi \
@@ -92,7 +97,8 @@ sudo chroot $HOME/Unity-XP/chroot sh -c "wget -qO- https://raw.githubusercontent
 sudo sed -i 's/Humanity/Papirus,Humanity/g' $HOME/Unity-XP/chroot/usr/share/icons/Yaru++/index.theme
 sudo sed -i 's/Humanity/Papirus-Dark,Humanity/g' $HOME/Unity-XP/chroot/usr/share/icons/Yaru++-Dark/index.theme
 sudo chroot $HOME/Unity-XP/chroot sh -c "git clone https://github.com/vinceliuice/vimix-gtk-themes;cd vimix-gtk-themes;./Install"
-sudo rm -rfv $HOME/Unity-XP/chroot/vimix-gtk-themes
+sudo chroot $HOME/Unity-XP/chroot sh -c "git clone https://github.com/vinceliuice/vimix-kde;cp -rfv vimix-kde/Kvantum/Vimix* /usr/share/Kvantum/"
+sudo rm -rfv $HOME/Unity-XP/chroot/vimix-gtk-themes $HOME/Unity-XP/chroot/vimix-kde
 sudo chroot $HOME/Unity-XP/chroot apt install -y \
     gparted \
     ubiquity \
@@ -130,9 +136,13 @@ sudo cp -rfv code/settings/nvidia-drm.conf $HOME/Unity-XP/chroot/lib/modprobe.d/
 sudo cp -rfv code/settings/limits.conf $HOME/Unity-XP/chroot/etc/security/limits.d/rauldipeas.conf
 sudo cp -rfv code/settings/sysctl.conf $HOME/Unity-XP/chroot/etc/sysctl.d/rauldipeas.conf
 sudo cp -rfv code/settings/nvidia-composite.desktop $HOME/Unity-XP/chroot/etc/xdg/autostart/nvidia-composite.desktop
-sudo mkdir -p $HOME/Unity-XP/chroot/etc/skel/.config/dconf
-sudo cp -rfv code/settings/user $HOME/Unity-XP/chroot/etc/skel/.config/dconf/user
+sudo cp -rfv code/settings/99qt5ct.conf $HOME/Unity-XP/chroot/etc/environment.d/99qt5ct.conf
+sudo mkdir -p $HOME/Unity-XP/chroot/etc/skel/.config/{dconf,Kvantum,qt5ct,olivevideoeditor.org/Olive}
 #keyboard-indicator(off) #Yaru++-Dark(icons) #vimix-dark-laptop-ruby(gtk-theme) #Breeze(cursor) #Wallpaper(ubuntu-glitch-logo)
+sudo cp -rfv code/settings/user $HOME/Unity-XP/chroot/etc/skel/.config/dconf/user
+sudo cp -rfv code/settings/kvantum.kvconfig $HOME/Unity-XP/chroot/etc/skel/.config/Kvantum/kvantum.kvconfig
+sudo cp -rfv code/settings/config.xml $HOME/Unity-XP/chroot/etc/skel/.config/qt5ct/olivevideoeditor.org/Olive/config.xml
+sudo cp -rfv code/settings/qt5ct.conf $HOME/Unity-XP/chroot/etc/skel/.config/qt5ct/qt5ct.conf
 sudo sed -i 's/us/br/g' $HOME/Unity-XP/chroot/etc/default/keyboard
 cd $HOME/Unity-XP
 mkdir -p image/{casper,isolinux,install}

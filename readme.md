@@ -36,11 +36,13 @@ O sistema usa como _base_ o [**Ubuntu 19.10**](https://ubuntu.com) e o kernel é
  - [GIMP](https://www.gimp.org/)
  - [GNOME MPV](https://celluloid-player.github.io/)
  - [gThumb](https://wiki.gnome.org/Apps/Gthumb)
+ - [Kvantum](https://github.com/tsujan/Kvantum/tree/master/Kvantum)
  - [LibreOffice(Calc, Draw, Impress e Writer)](https://pt-br.libreoffice.org/)
  - [Nemo](https://en.wikipedia.org/wiki/Nemo_%28file_manager%29)
  - [Neofetch](https://github.com/dylanaraps/neofetch)
  - [OBS Studio](https://obsproject.com/)
  - [Olive](https://www.olivevideoeditor.org/)
+ - [Qt5Ct](https://sourceforge.net/projects/qt5ct/)
  - [RawTherapee](https://rawtherapee.com/)
  - [Redshift GTK](http://jonls.dk/redshift/)
  - [Synaptic](http://www.nongnu.org/synaptic/)
@@ -50,6 +52,7 @@ O sistema usa como _base_ o [**Ubuntu 19.10**](https://ubuntu.com) e o kernel é
 
 ### Temas
   - [Vimix(GTK)](https://vinceliuice.github.io/theme-vimix.html)
+  - [Vimix(Kvantum)](https://github.com/vinceliuice/vimix-kde)
   - [Yaru++(icons)](https://github.com/Bonandry/yaru-plus)
   - [Papirus(icons, inherits)](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme/)
   - [Breeze(Cursor)](https://github.com/KDE/breeze)
