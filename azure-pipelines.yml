@@ -5,6 +5,7 @@ trigger:
     include: [ master ]
   paths:
     exclude:
+      - _config.yml
       - readme.md
       - screenshots/*
 variables:
