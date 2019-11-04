@@ -23,7 +23,10 @@ EOF
 sudo chroot $HOME/Unity-XP/chroot dpkg --add-architecture i386
 sudo chroot $HOME/Unity-XP/chroot apt update
 sudo chroot $HOME/Unity-XP/chroot apt install -y software-properties-common
-sudo chroot $HOME/Unity-XP/chroot add-apt-repository -y ppa:damentz/liquorix
+sudo chroot $HOME/Unity-XP/chroot add-apt-repository -yn ppa:damentz/liquorix
+sudo chroot $HOME/Unity-XP/chroot add-apt-repository -yn ppa:graphics-drivers/ppa
+sudo chroot $HOME/Unity-XP/chroot add-apt-repository -yn ppa:lutris-team/lutris
+sudo chroot $HOME/Unity-XP/chroot add-apt-repository -y ppa:oibaf/graphics-drivers
 sudo chroot $HOME/Unity-XP/chroot apt install -y systemd-sysv
 sudo chroot $HOME/Unity-XP/chroot sh -c "dbus-uuidgen > /etc/machine-id"
 sudo chroot $HOME/Unity-XP/chroot ln -fs /etc/machine-id /var/lib/dbus/machine-id
@@ -111,6 +114,13 @@ sudo chroot $HOME/Unity-XP/chroot sh -c "deborphan | xargs sudo apt autoremove -
 sudo chroot $HOME/Unity-XP/chroot sh -c "deborphan | xargs sudo apt autoremove --purge -y"
 sudo chroot $HOME/Unity-XP/chroot update-alternatives --set x-cursor-theme /etc/X11/cursors/Breeze_Snow.theme
 sudo chroot $HOME/Unity-XP/chroot apt dist-upgrade -y
+sudo chroot $HOME/Unity-XP/chroot apt install -y \
+    lutris \
+    mesa-vulkan-drivers \
+    nvidia-driver-440 \
+    xboxdrv
+sudo chroot $HOME/Unity-XP/chroot wget -c https://steamcdn-a.akamaihd.net/client/installer/steam.deb
+sudo chroot $HOME/Unity-XP/chroot apt install -y --no-install-recommends ./steam.deb;sudo rm -rfv $HOME/Unity-XP/chroot/steam*.deb
 sudo chroot $HOME/Unity-XP/chroot apt install --reinstall resolvconf
 cat <<EOF | sudo tee $HOME/Unity-XP/chroot/etc/NetworkManager/NetworkManager.conf
 [main]

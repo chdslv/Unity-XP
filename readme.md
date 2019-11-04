@@ -23,6 +23,8 @@ O sistema usa como _base_ o [**Ubuntu 19.10**](https://ubuntu.com) e o kernel é
  - [**ZRAM**](https://en.wikipedia.org/wiki/Zram)
  - [`limits.conf`](https://github.com/rauldipeas/Unity-XP/blob/master/code/settings/limits.conf) otimizado
  - [`sysctl.conf`](https://github.com/rauldipeas/Unity-XP/blob/master/code/settings/sysctl.conf) otimizado
+ - [**MESA Drivers**](https://launchpad.net/~oibaf/+archive/ubuntu/graphics-drivers)_(ppa:oibaf/graphics-drivers)_
+ - [**NVIDIA Driver**](https://launchpad.net/~graphics-drivers/+archive/ubuntu/ppa)_(ppa:graphics-drivers/ppa)_
  - [**NVIDIA DRM**](https://github.com/rauldipeas/Unity-XP/blob/master/code/settings/nvidia-drm.conf) ativado por padrão
  - [**NVIDIA Force Full Composite**](https://github.com/rauldipeas/Unity-XP/blob/master/code/settings/nvidia-composite.desktop) ativado por padrão
  - Ambiente de desktop [**Unity 7**](https://en.wikipedia.org/wiki/Unity_%28user_interface%29)
@@ -38,6 +40,7 @@ O sistema usa como _base_ o [**Ubuntu 19.10**](https://ubuntu.com) e o kernel é
  - [gThumb](https://wiki.gnome.org/Apps/Gthumb)
  - [Kvantum](https://github.com/tsujan/Kvantum/tree/master/Kvantum)
  - [LibreOffice(Calc, Draw, Impress e Writer)](https://pt-br.libreoffice.org/)
+ - [Lutris](https://lutris.net/)
  - [Nemo](https://en.wikipedia.org/wiki/Nemo_%28file_manager%29)
  - [Neofetch](https://github.com/dylanaraps/neofetch)
  - [OBS Studio](https://obsproject.com/)
@@ -45,10 +48,12 @@ O sistema usa como _base_ o [**Ubuntu 19.10**](https://ubuntu.com) e o kernel é
  - [Qt5Ct](https://sourceforge.net/projects/qt5ct/)
  - [RawTherapee](https://rawtherapee.com/)
  - [Redshift GTK](http://jonls.dk/redshift/)
+ - [Steam](https://store.steampowered.com/about/)
  - [Synaptic](http://www.nongnu.org/synaptic/)
  - [Telegram](https://telegram.org/)
  - [Tilix](https://gnunn1.github.io/tilix-web/)
  - [TimeShift](https://teejeetech.in/timeshift/)
+ - [XBoxDrv](https://xboxdrv.gitlab.io/)
 
 ### Temas
   - [Vimix(GTK)](https://vinceliuice.github.io/theme-vimix.html)
