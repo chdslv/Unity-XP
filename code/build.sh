@@ -117,7 +117,6 @@ sudo chroot $HOME/Unity-XP/chroot apt dist-upgrade -y
 sudo chroot $HOME/Unity-XP/chroot apt install -y \
     lutris \
     mesa-vulkan-drivers \
-    nvidia-driver-440 \
     xboxdrv
 sudo chroot $HOME/Unity-XP/chroot wget -c https://steamcdn-a.akamaihd.net/client/installer/steam.deb
 sudo chroot $HOME/Unity-XP/chroot apt install -y --no-install-recommends ./steam.deb;sudo rm -rfv $HOME/Unity-XP/chroot/steam*.deb
