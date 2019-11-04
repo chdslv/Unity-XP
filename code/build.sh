@@ -111,6 +111,7 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y \
 sudo chroot $HOME/Unity-XP/chroot apt install -y \
     lutris \
     mesa-vulkan-drivers \
+    mesa-vulkan-drivers:i386 \
     nvidia-driver-440 \
     steam-installer \
     xboxdrv
