@@ -65,8 +65,8 @@ O sistema usa como _base_ o [**Ubuntu 19.10**](https://ubuntu.com) e o kernel é
 ~~No momento, _**não há a possibilidade de disponibilizar uma imagem de instalação**_, porém,~~ você pode _compilar a imagem por sua conta e risco_, usando os comandos _abaixo_:
 
 ```bash
-git clone https://github.com/rauldipeas/Unity-XP
-cd Unity-XP
+git clone https://github.com/rauldipeas/Unity-XP unity-xp-source
+cd unity-xp-source
 bash code/build.sh
 ```
 
