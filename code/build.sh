@@ -25,7 +25,7 @@ sudo chroot $HOME/Unity-XP/chroot apt update
 sudo chroot $HOME/Unity-XP/chroot apt install -y software-properties-common
 sudo chroot $HOME/Unity-XP/chroot add-apt-repository -yn ppa:damentz/liquorix
 sudo chroot $HOME/Unity-XP/chroot add-apt-repository -yn ppa:graphics-drivers/ppa
-sudo chroot $HOME/Unity-XP/chroot add-apt-repository -yn ppa:lutris-team/lutris
+sudo chroot $HOME/Unity-XP/chroot add-apt-repository -y ppa:lutris-team/lutris
 #sudo chroot $HOME/Unity-XP/chroot add-apt-repository -y ppa:oibaf/graphics-drivers
 sudo chroot $HOME/Unity-XP/chroot apt install -y systemd-sysv
 sudo chroot $HOME/Unity-XP/chroot sh -c "dbus-uuidgen > /etc/machine-id"
