@@ -25,7 +25,8 @@ sudo chroot $HOME/Unity-XP/chroot apt update
 sudo chroot $HOME/Unity-XP/chroot apt install -y software-properties-common
 sudo chroot $HOME/Unity-XP/chroot add-apt-repository -yn ppa:damentz/liquorix
 sudo chroot $HOME/Unity-XP/chroot add-apt-repository -yn ppa:lutris-team/lutris
-sudo chroot $HOME/Unity-XP/chroot add-apt-repository -y ppa:graphics-drivers/ppa
+sudo chroot $HOME/Unity-XP/chroot add-apt-repository -y ppa:system76/pop
+#sudo chroot $HOME/Unity-XP/chroot add-apt-repository -y ppa:graphics-drivers/ppa
 sudo chroot $HOME/Unity-XP/chroot add-apt-repository -yn ppa:oibaf/graphics-drivers
 sudo chroot $HOME/Unity-XP/chroot apt install -y systemd-sysv
 sudo chroot $HOME/Unity-XP/chroot sh -c "dbus-uuidgen > /etc/machine-id"
@@ -113,7 +114,7 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y \
     lutris \
     mesa-vulkan-drivers \
     mesa-vulkan-drivers:i386 \
-    nvidia-driver-440 \
+    nvidia-driver-435 \
     steam-installer \
     xboxdrv
 sudo chroot $HOME/Unity-XP/chroot apt autoremove --purge -y eog gnome-shell gnome-terminal libreoffice-math info nautilus vlc* xterm
@@ -144,7 +145,6 @@ sudo umount $HOME/Unity-XP/chroot/dev
 sudo umount $HOME/Unity-XP/chroot/run
 sudo sed -i 's/quiet splash/quiet splash loglevel=0 logo.nologo vt.global_cursor_default=0 mitigations=off/g' $HOME/Unity-XP/chroot/etc/default/grub
 sudo cp -rfv code/settings/nvidia-drm.conf $HOME/Unity-XP/chroot/lib/modprobe.d/nvidia-drm.conf
-sudo cp -rfv code/settings/nvidia-drm.conf $HOME/Unity-XP/chroot/etc/modprobe.d/nvidia-drm.conf
 sudo cp -rfv code/settings/limits.conf $HOME/Unity-XP/chroot/etc/security/limits.d/rauldipeas.conf
 sudo cp -rfv code/settings/sysctl.conf $HOME/Unity-XP/chroot/etc/sysctl.d/rauldipeas.conf
 sudo cp -rfv code/settings/nvidia-composite.desktop $HOME/Unity-XP/chroot/etc/xdg/autostart/nvidia-composite.desktop
