@@ -79,7 +79,7 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y \
     indicator-session \
     libreoffice-calc \
     libreoffice-draw \
-    libreoffice-gtk3 \
+    libreoffice-gtk2 \
     libreoffice-impress \
     libreoffice-l10n-pt-br \
     libreoffice-writer \
