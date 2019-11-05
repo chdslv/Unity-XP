@@ -16,9 +16,9 @@ sudo chroot $HOME/Unity-XP/chroot mount none -t devpts /dev/pts
 sudo chroot $HOME/Unity-XP/chroot sh -c "export HOME=/root"
 echo "Unity-XP" | sudo tee $HOME/Unity-XP/chroot/etc/hostname
 cat <<EOF | sudo tee $HOME/Unity-XP/chroot/etc/apt/sources.list
-deb http://br.archive.ubuntu.com/ubuntu/ eoan main restricted universe multiverse
-deb http://br.archive.ubuntu.com/ubuntu/ eoan-security main restricted universe multiverse
-deb http://br.archive.ubuntu.com/ubuntu/ eoan-updates main restricted universe multiverse
+deb http://us.archive.ubuntu.com/ubuntu/ eoan main restricted universe multiverse
+deb http://us.archive.ubuntu.com/ubuntu/ eoan-security main restricted universe multiverse
+deb http://us.archive.ubuntu.com/ubuntu/ eoan-updates main restricted universe multiverse
 EOF
 sudo chroot $HOME/Unity-XP/chroot dpkg --add-architecture i386
 sudo chroot $HOME/Unity-XP/chroot apt update
