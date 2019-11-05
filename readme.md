@@ -30,6 +30,7 @@ O sistema usa como _base_ o [**Ubuntu 19.10**](https://ubuntu.com) e o kernel é
  - Ambiente de desktop [**Unity 7**](https://en.wikipedia.org/wiki/Unity_%28user_interface%29)
 
 ### Lista de programas inclusos:
+ - [AppImageD](https://github.com/AppImage/appimaged)
  - [Audacity](https://www.audacityteam.org/)
  - [CompizConfig Settings Manager](https://en.wikipedia.org/wiki/Compiz)
  - [Epiphany(Web)](https://wiki.gnome.org/Apps/Web)

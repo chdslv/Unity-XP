@@ -100,6 +100,8 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y \
     vino \
     xserver-xorg-input-synaptics \
     zram-config
+sudo chroot $HOME/Unity-XP/chroot sh -c "wget -c https://github.com/rauldipeas/ubuntu-postinst/raw/master/resources/appimaged_1-alpha-git05c4438.travis209_amd64.deb"
+sudo chroot $HOME/Unity-XP/chroot apt install ./appimaged*.deb;sudo rm -rfv $HOME/Unity-XP/chroot/appimaged*.deb
 sudo chroot $HOME/Unity-XP/chroot sh -c "wget -qO- https://raw.githubusercontent.com/Bonandry/yaru-plus/master/install.sh | sh"
 sudo sed -i 's/Humanity/Papirus,Humanity/g' $HOME/Unity-XP/chroot/usr/share/icons/Yaru++/index.theme
 sudo sed -i 's/Humanity/Papirus-Dark,Humanity/g' $HOME/Unity-XP/chroot/usr/share/icons/Yaru++-Dark/index.theme
@@ -152,6 +154,7 @@ sudo cp -rfv code/settings/sysctl.conf $HOME/Unity-XP/chroot/etc/sysctl.d/rauldi
 sudo cp -rfv code/settings/nvidia-composite.desktop $HOME/Unity-XP/chroot/etc/xdg/autostart/nvidia-composite.desktop
 sudo cp -rfv code/settings/99qt5ct.conf $HOME/Unity-XP/chroot/etc/environment.d/99qt5ct.conf
 sudo mkdir -p $HOME/Unity-XP/chroot/etc/skel/.config/{dconf,Kvantum,qt5ct,olivevideoeditor.org/Olive}
+sudo cp -rfv $HOME/Unity-XP/chroot/usr/share/applications/appimaged*.desktop $HOME/Unity-XP/chroot/etc/xdg/autostart/
 #keyboard-indicator(off)
 #Yaru++-Dark(icons)
 #vimix-dark-laptop-ruby(gtk-theme)
