@@ -66,7 +66,7 @@ O sistema usa como _base_ o [**Ubuntu 19.10**](https://ubuntu.com) e o kernel é
   - [Papirus(icons, inherits)](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme/)
   - [Breeze(Cursor)](https://github.com/KDE/breeze)
 
-~~No momento, _**não há a possibilidade de disponibilizar uma imagem de instalação**_, porém,~~ você pode _compilar a imagem por sua conta e risco_, usando os comandos _abaixo_:
+[~~No momento, _**não há a possibilidade de disponibilizar uma imagem de instalação**_, porém,~~](https://github.com/rauldipeas/Unity-XP/releases) você pode _compilar a imagem por sua conta e risco_, usando os comandos _abaixo_:
 
 ```bash
 git clone https://github.com/rauldipeas/Unity-XP unity-xp-source
