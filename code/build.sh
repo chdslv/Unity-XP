@@ -107,7 +107,9 @@ sudo chroot $HOME/Unity-XP/chroot sh -c "wget -qO- https://raw.githubusercontent
 sudo sed -i 's/Humanity/Papirus,Humanity/g' $HOME/Unity-XP/chroot/usr/share/icons/Yaru++/index.theme
 sudo sed -i 's/Humanity/Papirus-Dark,Humanity/g' $HOME/Unity-XP/chroot/usr/share/icons/Yaru++-Dark/index.theme
 sudo chroot $HOME/Unity-XP/chroot sh -c "git clone https://github.com/vinceliuice/vimix-gtk-themes;cd vimix-gtk-themes;./Install"
-sudo chroot $HOME/Unity-XP/chroot sh -c "git clone https://github.com/vinceliuice/vimix-kde;cp -rfv vimix-kde/Kvantum/Vimix* /usr/share/Kvantum/"
+sudo chroot $HOME/Unity-XP/chroot sh -c "git clone https://github.com/vinceliuice/vimix-kde"
+sudo chroot $HOME/Unity-XP/chroot sh -c "cp -rfv vimix-kde/color-schemes/Vimix* /usr/share/color-schemes/"
+sudo chroot $HOME/Unity-XP/chroot sh -c "cp -rfv vimix-kde/Kvantum/Vimix* /usr/share/Kvantum/"
 sudo rm -rfv $HOME/Unity-XP/chroot/vimix-gtk-themes $HOME/Unity-XP/chroot/vimix-kde
 sudo chroot $HOME/Unity-XP/chroot apt install -y \
     gparted \
