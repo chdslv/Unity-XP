@@ -102,7 +102,7 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y \
     xserver-xorg-input-synaptics \
     zram-config
 sudo chroot $HOME/Unity-XP/chroot sh -c "wget -c https://github.com/rauldipeas/Unity-XP/raw/master/resources/appimaged_1-alpha-git05c4438.travis209_amd64.deb"
-sudo chroot $HOME/Unity-XP/chroot apt install ./appimaged*.deb;sudo rm -rfv $HOME/Unity-XP/chroot/appimaged*.deb
+sudo chroot $HOME/Unity-XP/chroot sh -c "apt install ./appimaged_1-alpha-git05c4438.travis209_amd64.deb";sudo rm -rfv $HOME/Unity-XP/chroot/appimaged*.deb
 sudo chroot $HOME/Unity-XP/chroot sh -c "wget -qO- https://raw.githubusercontent.com/Bonandry/yaru-plus/master/install.sh | sh"
 sudo sed -i 's/Humanity/Papirus,Humanity/g' $HOME/Unity-XP/chroot/usr/share/icons/Yaru++/index.theme
 sudo sed -i 's/Humanity/Papirus-Dark,Humanity/g' $HOME/Unity-XP/chroot/usr/share/icons/Yaru++-Dark/index.theme
