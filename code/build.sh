@@ -91,10 +91,13 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y \
     plymouth-theme-ubuntu-logo \
     rawtherapee \
     redshift-gtk \
+    rygel \
     synaptic \
     telegram-desktop \
     tilix \
     timeshift \
+    vinagre \
+    vino \
     xserver-xorg-input-synaptics \
     zram-config
 sudo chroot $HOME/Unity-XP/chroot sh -c "wget -qO- https://raw.githubusercontent.com/Bonandry/yaru-plus/master/install.sh | sh"
