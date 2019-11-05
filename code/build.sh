@@ -24,8 +24,8 @@ sudo chroot $HOME/Unity-XP/chroot dpkg --add-architecture i386
 sudo chroot $HOME/Unity-XP/chroot apt update
 sudo chroot $HOME/Unity-XP/chroot apt install -y software-properties-common
 sudo chroot $HOME/Unity-XP/chroot add-apt-repository -yn ppa:damentz/liquorix
-sudo chroot $HOME/Unity-XP/chroot add-apt-repository -yn ppa:graphics-drivers/ppa
 sudo chroot $HOME/Unity-XP/chroot add-apt-repository -y ppa:lutris-team/lutris
+sudo chroot $HOME/Unity-XP/chroot add-apt-repository -yn ppa:graphics-drivers/ppa
 sudo chroot $HOME/Unity-XP/chroot add-apt-repository -yn ppa:oibaf/graphics-drivers
 sudo chroot $HOME/Unity-XP/chroot apt install -y systemd-sysv
 sudo chroot $HOME/Unity-XP/chroot sh -c "dbus-uuidgen > /etc/machine-id"
@@ -95,6 +95,7 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y \
     telegram-desktop \
     tilix \
     timeshift \
+    xserver-xorg-input-synaptics \
     zram-config
 sudo chroot $HOME/Unity-XP/chroot sh -c "wget -qO- https://raw.githubusercontent.com/Bonandry/yaru-plus/master/install.sh | sh"
 sudo sed -i 's/Humanity/Papirus,Humanity/g' $HOME/Unity-XP/chroot/usr/share/icons/Yaru++/index.theme
@@ -112,7 +113,7 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y \
     lutris \
     mesa-vulkan-drivers \
     mesa-vulkan-drivers:i386 \
-    nvidia-driver-440 \
+    nvidia-driver-435 \
     steam-installer \
     xboxdrv
 sudo chroot $HOME/Unity-XP/chroot apt autoremove --purge -y eog gnome-shell gnome-terminal libreoffice-math info nautilus vlc* xterm
@@ -154,6 +155,7 @@ sudo mkdir -p $HOME/Unity-XP/chroot/etc/skel/.config/{dconf,Kvantum,qt5ct,olivev
 #Breeze(cursor)
 #Wallpaper(ubuntu-glitch-logo)
 #Tilix on Nemo(open terminal here)
+#Tap-to-click(touchpad)
 sudo cp -rfv code/settings/user $HOME/Unity-XP/chroot/etc/skel/.config/dconf/user
 sudo cp -rfv code/settings/kvantum.kvconfig $HOME/Unity-XP/chroot/etc/skel/.config/Kvantum/kvantum.kvconfig
 sudo cp -rfv code/settings/config.xml $HOME/Unity-XP/chroot/etc/skel/.config/olivevideoeditor.org/Olive/config.xml
