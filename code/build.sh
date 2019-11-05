@@ -26,7 +26,6 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y software-properties-common
 sudo chroot $HOME/Unity-XP/chroot add-apt-repository -yn ppa:damentz/liquorix
 sudo chroot $HOME/Unity-XP/chroot add-apt-repository -yn ppa:lutris-team/lutris
 sudo chroot $HOME/Unity-XP/chroot add-apt-repository -y ppa:system76/pop
-#sudo chroot $HOME/Unity-XP/chroot add-apt-repository -y ppa:graphics-drivers/ppa
 sudo chroot $HOME/Unity-XP/chroot add-apt-repository -yn ppa:oibaf/graphics-drivers
 sudo chroot $HOME/Unity-XP/chroot apt install -y systemd-sysv
 sudo chroot $HOME/Unity-XP/chroot sh -c "dbus-uuidgen > /etc/machine-id"
@@ -117,7 +116,7 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y \
     nvidia-driver-435 \
     steam-installer \
     xboxdrv
-sudo chroot $HOME/Unity-XP/chroot apt autoremove --purge -y eog gnome-shell gnome-terminal libreoffice-math info nautilus vlc* xterm
+sudo chroot $HOME/Unity-XP/chroot apt autoremove --purge -y eog gnome-shell gnome-terminal libreoffice-math info mutter* nautilus vlc* xterm
 sudo chroot $HOME/Unity-XP/chroot sh -c "deborphan | xargs sudo apt autoremove --purge -y"
 sudo chroot $HOME/Unity-XP/chroot sh -c "deborphan | xargs sudo apt autoremove --purge -y"
 sudo chroot $HOME/Unity-XP/chroot sh -c "deborphan | xargs sudo apt autoremove --purge -y"
