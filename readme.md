@@ -48,11 +48,14 @@ O sistema usa como _base_ o [**Ubuntu 19.10**](https://ubuntu.com) e o kernel é
  - [Qt5Ct](https://sourceforge.net/projects/qt5ct/)
  - [RawTherapee](https://rawtherapee.com/)
  - [Redshift GTK](http://jonls.dk/redshift/)
+ - [Rygel](https://wiki.gnome.org/Projects/Rygel/)
  - [Steam](https://store.steampowered.com/about/)
  - [Synaptic](http://www.nongnu.org/synaptic/)
  - [Telegram](https://telegram.org/)
  - [Tilix](https://gnunn1.github.io/tilix-web/)
  - [TimeShift](https://teejeetech.in/timeshift/)
+ - [Vinagre](https://wiki.gnome.org/Apps/Vinagre/)
+ - [Vino](https://help.ubuntu.com/community/VNC/Servers)
  - [XBoxDrv](https://xboxdrv.gitlab.io/)
 
 ### Temas
