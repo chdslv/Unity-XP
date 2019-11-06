@@ -30,13 +30,16 @@ O sistema usa como _base_ o [**Ubuntu 19.10**](https://ubuntu.com) e o kernel é
  - Ambiente de desktop [**Unity 7**](https://en.wikipedia.org/wiki/Unity_%28user_interface%29)
 
 ### Lista de programas inclusos:
+ - [Activity Log Manager](https://launchpad.net/activity-log-manager)
  - [AppImageD](https://github.com/AppImage/appimaged)
  - [Audacity](https://www.audacityteam.org/)
  - [CompizConfig Settings Manager](https://en.wikipedia.org/wiki/Compiz)
+ - [Disks](https://wiki.gnome.org/Apps/Disks)
  - [Epiphany(Web)](https://wiki.gnome.org/Apps/Web)
  - [Ferramenta de captura de tela do GNOME](https://en.wikipedia.org/wiki/GNOME_Screenshot)
  - [GDebI](https://launchpad.net/gdebi)
  - [GIMP](https://www.gimp.org/)
+ - [GNOME Calculator](https://wiki.gnome.org/Apps/Calculator)
  - [GNOME MPV](https://celluloid-player.github.io/)
  - [gThumb](https://wiki.gnome.org/Apps/Gthumb)
  - [Kvantum](https://github.com/tsujan/Kvantum/tree/master/Kvantum)
@@ -57,6 +60,7 @@ O sistema usa como _base_ o [**Ubuntu 19.10**](https://ubuntu.com) e o kernel é
  - [TimeShift](https://teejeetech.in/timeshift/)
  - [Vinagre](https://wiki.gnome.org/Apps/Vinagre/)
  - [Vino](https://help.ubuntu.com/community/VNC/Servers)
+ - [Visual Studio Code](https://code.visualstudio.com/)
  - [XBoxDrv](https://xboxdrv.gitlab.io/)
 
 ### Temas

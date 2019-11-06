@@ -59,6 +59,7 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y --no-install-recommends \
     qt5-style-kvantum-l10n \
     ubuntu-unity-desktop
 sudo chroot $HOME/Unity-XP/chroot apt install -y \
+    activity-log-manager \
     audacity \
     breeze-cursor-theme \
     compizconfig-settings-manager \
@@ -71,6 +72,8 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y \
     gdebi \
     gimp \
     git \
+    gnome-calculator \
+    gnome-disk-utility \
     gnome-screenshot \
     gnome-themes-extra \
     gthumb \
@@ -90,6 +93,7 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y \
     olive-editor \
     papirus-icon-theme \
     plymouth-theme-ubuntu-logo \
+    pulseaudio-module-bluetooth \
     rawtherapee \
     redshift-gtk \
     rygel \
@@ -103,6 +107,8 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y \
     zram-config
 sudo chroot $HOME/Unity-XP/chroot sh -c "wget -c https://github.com/rauldipeas/Unity-XP/raw/master/resources/appimaged_1-alpha-git05c4438.travis209_amd64.deb"
 sudo chroot $HOME/Unity-XP/chroot sh -c "apt install ./appimaged_1-alpha-git05c4438.travis209_amd64.deb";sudo rm -rfv $HOME/Unity-XP/chroot/appimaged*.deb
+sudo chroot $HOME/Unity-XP/chroot sh -c "wget -c https://az764295.vo.msecnd.net/stable/6ab598523be7a800d7f3eb4d92d7ab9a66069390/code_1.39.2-1571154070_amd64.deb"
+sudo chroot $HOME/Unity-XP/chroot sh -c "apt install ./code_1.39.2-1571154070_amd64.deb";sudo rm -rfv $HOME/Unity-XP/chroot/code*.deb
 sudo chroot $HOME/Unity-XP/chroot sh -c "wget -qO- https://raw.githubusercontent.com/Bonandry/yaru-plus/master/install.sh | sh"
 sudo sed -i 's/Humanity/Papirus,Humanity/g' $HOME/Unity-XP/chroot/usr/share/icons/Yaru++/index.theme
 sudo sed -i 's/Humanity/Papirus-Dark,Humanity/g' $HOME/Unity-XP/chroot/usr/share/icons/Yaru++-Dark/index.theme
