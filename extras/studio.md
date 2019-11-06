@@ -14,7 +14,7 @@ WINE_SRV_RT=10
 STAGING_WRITECOPY=1
 STAGING_SHARED_MEMORY=1
 WINE_ENABLE_PIPE_SYNC_FOR_APP=1' >> ~/.profile
-winetricks mfc42 vcrun2013 vcrun2015 win7
+winetricks --unattended mfc42 vcrun2013 vcrun2015 win7
 ```
 
 ### JACK
