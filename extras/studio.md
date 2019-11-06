@@ -64,6 +64,6 @@ Icon=text-x-plain" | sudo tee -a /usr/share/applications/cockos-reaper.desktop
 
 ### LinVST
 ```bash
-wget -c https://github.com/osxmidi/LinVst/releases/download/2.7/LinVst-64bit-32bit_2.7.0.deb #update_link
+wget -c https://github.com/osxmidi/LinVst/releases/download/2.7/LinVst-64bit-32bit_2.7.2.deb #update_link
 sudo apt install -y ./LinVst*.deb
 ```
