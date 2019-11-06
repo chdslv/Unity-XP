@@ -42,6 +42,7 @@ O sistema usa como _base_ o [**Ubuntu 19.10**](https://ubuntu.com) e o kernel é
  - [GNOME Calculator](https://wiki.gnome.org/Apps/Calculator)
  - [GNOME MPV](https://celluloid-player.github.io/)
  - [gThumb](https://wiki.gnome.org/Apps/Gthumb)
+ - [HardInfo](https://www.berlios.de/software/hardinfo/)
  - [Kvantum](https://github.com/tsujan/Kvantum/tree/master/Kvantum)
  - [LibreOffice(Calc, Draw, Impress e Writer)](https://pt-br.libreoffice.org/)
  - [Lutris](https://lutris.net/)
