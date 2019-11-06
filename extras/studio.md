@@ -1,0 +1,69 @@
+### WINE
+```bash
+echo "deb https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/xUbuntu_18.04 ./" | sudo tee /etc/apt/sources.list.d/wine-obs.list
+wget -O- -q https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/xUbuntu_18.04/Release.key | sudo apt-key add -
+sudo apt update;sudo apt install -y winehq-staging winetricks q4wine
+sudo wget -O /usr/local/bin/winetricks https://raw.githubusercontent.com/Winetricks/winetricks/master/src/winetricks
+sudo chmod +x /usr/local/bin/winetricks
+sudo setcap cap_sys_nice+ep /opt/wine-staging/bin/wineserver
+echo '# Wine-RT
+STAGING_RT_PRIORITY_SERVER=90
+STAGING_RT_PRIORITY_BASE=90
+WINE_RT=15
+WINE_SRV_RT=10
+STAGING_WRITECOPY=1
+STAGING_SHARED_MEMORY=1
+WINE_ENABLE_PIPE_SYNC_FOR_APP=1' >> ~/.profile
+winetricks mfc42 vcrun2013 vcrun2015 win7
+```
+
+### JACK
+```bash
+echo jackd2 jackd/tweak_rt_limits string true | sudo debconf-set-selections
+sudo apt install -y --no-install-recommends patchage ubuntustudio-controls
+sudo apt install -y carla guvcview
+sudo sed -i 's/256/224/g' /usr/share/ubuntustudio-controls/ubuntustudio-controls.glade
+echo DPkg::Post-Invoke \{\"sed -i \'s/256/224/g\' /usr/share/ubuntustudio-controls/ubuntustudio-controls.glade\"\;\}\; | sudo tee /etc/apt/apt.conf.d/100ubuntustudio-controls
+```
+
+### REAPER
+```bash
+wget -c https://www.reaper.fm/files/5.x/reaper5984_linux_x86_64.tar.xz #update_link
+tar -Jxf reaper*.tar.xz;cd reaper_linux*
+sudo ./install-reaper.sh --install /opt --quiet --integrate-desktop --usr-local-bin-symlink;cd ..
+sudo wget -O /opt/REAPER/Plugins/reaper_sws64.so http://www.sws-extension.org/download/pre-release/linux-2.10.0.0/reaper_sws64.so
+mkdir -pv ~/.config/REAPER/UserPlugins
+wget -c https://github.com/cfillion/reapack/releases/download/v1.2.1/reaper_reapack64.so -O ~/.config/REAPER/UserPlugins/reaper_reapack64.so
+echo "
+Actions=NewProject;ShowAudioConfig;ReaMote;WhatsNew;License;
+[Desktop Action NewProject]
+Name=REAPER (create new project)
+Name[pt_BR]=REAPER (criar novo projeto)
+Exec=/opt/REAPER/reaper -new
+Icon=cockos-reaper
+[Desktop Action ShowAudioConfig]
+Name=REAPER (show audio configuration on startup)
+Name[pt_BR]=REAPER (mostrar configurações de áudio ao iniciar)
+Exec=/opt/REAPER/reaper -audiocfg
+Icon=cockos-reaper
+[Desktop Action ReaMote]
+Name=ReaMote
+Exec=/opt/REAPER/reamote-server
+Icon=folder-remote
+[Desktop Action WhatsNew]
+Name=What's new
+Name[pt_BR]=O que há de novo?
+Exec=xdg-open /opt/REAPER/whatsnew.txt
+Icon=text-x-plain
+[Desktop Action License]
+Name=License and User Agreement
+Name[pt_BR]=Licença e contrato de usuário
+Exec=xdg-open /opt/REAPER/license.txt
+Icon=text-x-plain" | sudo tee -a /usr/share/applications/cockos-reaper.desktop
+```
+
+### LinVST
+```bash
+wget -c https://github.com/osxmidi/LinVst/releases/download/2.7/LinVst-64bit-32bit_2.7.0.deb #update_link
+sudo apt install -y ./LinVst*.deb
+```

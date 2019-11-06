@@ -9,6 +9,7 @@ trigger:
       - readme.md
       - resources/*
       - screenshots/*
+      - studio/*
 variables:
   - group: GitHub
 steps:
