@@ -19,8 +19,8 @@ winetricks --unattended mfc42 vcrun2013 vcrun2015 win7
 
 ### JACK
 ```bash
-sudo usermode -aG audio $USER
-sudo usermode -aG video $USER
+sudo usermod -aG audio $USER
+sudo usermod -aG video $USER
 echo jackd2 jackd/tweak_rt_limits string true | sudo debconf-set-selections
 sudo apt install -y --no-install-recommends patchage ubuntustudio-controls
 sudo apt install -y carla
