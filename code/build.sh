@@ -77,6 +77,7 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y \
     gnome-screenshot \
     gnome-themes-extra \
     gthumb \
+    hud \
     indicator-application \
     indicator-appmenu \
     indicator-session \
@@ -101,6 +102,7 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y \
     telegram-desktop \
     tilix \
     timeshift \
+    unity-tweak-tool \
     vinagre \
     vino \
     xserver-xorg-input-synaptics \
