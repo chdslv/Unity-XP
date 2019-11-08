@@ -79,6 +79,7 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y \
     gthumb \
     hud \
     indicator-application \
+    indicator-application-gtk2 \
     indicator-appmenu \
     indicator-session \
     libreoffice-calc \

@@ -1,0 +1,8 @@
+[Desktop Entry]
+Encoding=UTF-8
+Type=Application
+Name=PJeOffice
+Categories=Office;
+Exec=/usr/share/pje-office/pjeOffice.sh
+Icon=PJeOffice
+StartupWMClass=br-jus-cnj-pje-office-PJeOffice
