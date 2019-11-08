@@ -69,3 +69,18 @@ Icon=text-x-plain" | sudo tee -a /usr/share/applications/cockos-reaper.desktop
 wget -c https://github.com/osxmidi/LinVst/releases/download/2.7/LinVst-64bit-32bit_2.7.2.deb #update_link
 sudo apt install -y ./LinVst*.deb
 ```
+
+### DaVinci Resolve
+```bash
+wget -c https://github.com/rauldipeas/ubuntu-postinst/raw/master/resources/ffmulticonverter_1.8.0-dmo1-1ubuntu1-rauldipeas_all.deb
+sudo apt install -y ./ffmulticonverter*rauldipeas*.deb ocl-icd-libopencl1
+```
+[**BAIXAR O DAVINCI RESOLVE MANUALMENTE NO SITE OFICIAL**](https://www.blackmagicdesign.com/products/davinciresolve)
+```bash
+unzip DaVinci_Resolve*.zip;./DaVinci_Resolve*Linux.run
+echo 'StartupWMClass=resolve' | sudo tee -a /usr/share/applications/com.blackmagicdesign.resolve.desktop
+echo 'Categories=AudioVideo;' | sudo tee -a /usr/share/applications/com.blackmagicdesign.resolve.desktop
+sudo sed -i 's/Icon=\/opt\/resolve\/graphics\/DV_Resolve.png/Icon=resolve/g' /usr/share/applications/com.blackmagicdesign.resolve.desktop
+sudo rm -rfv /usr/share/applications/com.blackmagicdesign.resolve-*.desktop
+sudo ln -s /usr/lib/x86_64-linux-gnu/ /usr/lib64
+```
