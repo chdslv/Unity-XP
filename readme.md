@@ -84,3 +84,8 @@ bash code/build.sh
 Após a compilação, a imagem de instalação estará salva aqui: `~/Unity-XP/unity-xp-19.10-amd64.iso`
 
 O tempo de compilação **pode variar**, _**de acordo com a capacidade de processamento do seu hardware e a velocidade da sua internet**_, no meu notebook **IdeaPad-320** com processador **i7 7500U**, **8gb de RAM** e um **SSD**, usando uma conexão de **60mbps**, demora em torno de _30 minutos_.
+
+### Extras
+  - [**Gestures**](https://github.com/rauldipeas/Unity-XP/blob/master/extras/gestures.md)
+  - [**PJe Office**](https://github.com/rauldipeas/Unity-XP/blob/master/extras/pjeoffice.md)
+  - [**Studio**](https://github.com/rauldipeas/Unity-XP/blob/master/extras/studio.md)
