@@ -6,10 +6,12 @@ trigger:
   paths:
     exclude:
       - _config.yml
+      - netlify.toml
       - readme.md
+      - extras/*
       - resources/*
       - screenshots/*
-      - extras/*
+      - website/*
 variables:
   - group: GitHub
 steps:
