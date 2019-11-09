@@ -1,5 +1,4 @@
 #!/bin/bash
-sudo apt install -y debootstrap mtools squashfs-tools xorriso
 sudo rm -rfv $HOME/Unity-XP;mkdir -pv $HOME/Unity-XP
 sudo debootstrap \
     --arch=amd64 \

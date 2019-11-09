@@ -75,8 +75,17 @@ O sistema usa como _base_ o [**Ubuntu 19.10**](https://ubuntu.com) e o kernel é
 
 [~~No momento, _**não há a possibilidade de disponibilizar uma imagem de instalação**_, porém,~~](https://github.com/rauldipeas/Unity-XP/releases) você pode _compilar a imagem por sua conta e risco_, usando os comandos _abaixo_:
 
+ - **Instalando as dependências necessárias para compilação**
+```bash
+sudo apt install debootstrap grub-efi-amd64-signed mtools squashfs-tools xorriso
+```
+ - **Baixando os arquivos necessários para a compilação**
 ```bash
 git clone https://github.com/rauldipeas/Unity-XP unity-xp-source
+```
+
+ - **Compilando a imagem**
+```bash
 cd unity-xp-source
 bash code/build.sh
 ```
@@ -86,6 +95,7 @@ Após a compilação, a imagem de instalação estará salva aqui: `~/Unity-XP/u
 O tempo de compilação **pode variar**, _**de acordo com a capacidade de processamento do seu hardware e a velocidade da sua internet**_, no meu notebook **IdeaPad-320** com processador **i7 7500U**, **8gb de RAM** e um **SSD**, usando uma conexão de **60mbps**, demora em torno de _30 minutos_.
 
 ### Extras
+  - [**Drawers**](https://github.com/rauldipeas/Unity-XP/blob/master/extras/drawers.md)
   - [**Gestures**](https://github.com/rauldipeas/Unity-XP/blob/master/extras/gestures.md)
   - [**PJe Office**](https://github.com/rauldipeas/Unity-XP/blob/master/extras/pjeoffice.md)
   - [**Studio**](https://github.com/rauldipeas/Unity-XP/blob/master/extras/studio.md)

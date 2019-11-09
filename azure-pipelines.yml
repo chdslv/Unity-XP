@@ -13,6 +13,8 @@ trigger:
 variables:
   - group: GitHub
 steps:
+  - script: sudo apt update;sudo apt install -y debootstrap mtools squashfs-tools xorriso
+    displayName: Instalação de dependências
   - script: bash code/build.sh
     displayName: Compilação da imagem de instalação
   - task: PublishBuildArtifacts@1
