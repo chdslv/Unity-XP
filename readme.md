@@ -54,6 +54,7 @@ O sistema usa como _base_ o [**Ubuntu 19.10**](https://ubuntu.com) e o kernel é
  - [RawTherapee](https://rawtherapee.com/)
  - [Redshift GTK](http://jonls.dk/redshift/)
  - [Rygel](https://wiki.gnome.org/Projects/Rygel/)
+ - [Stacer](https://oguzhaninan.github.io/Stacer-Web/)
  - [Steam](https://store.steampowered.com/about/)
  - [Synaptic](http://www.nongnu.org/synaptic/)
  - [Telegram](https://telegram.org/)

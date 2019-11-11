@@ -115,6 +115,8 @@ sudo chroot $HOME/Unity-XP/chroot sh -c "wget -c https://github.com/rauldipeas/U
 sudo chroot $HOME/Unity-XP/chroot sh -c "apt install -y ./hardinfo_0.5.1+git20191030-1_amd64.deb";sudo rm -rfv $HOME/Unity-XP/chroot/hardinfo*.deb
 sudo chroot $HOME/Unity-XP/chroot sh -c "wget -c https://github.com/rauldipeas/Unity-XP/raw/master/resources/ocs-url_3.1.0-0ubuntu1_amd64.deb"
 sudo chroot $HOME/Unity-XP/chroot sh -c "apt install -y ./ocs-url_3.1.0-0ubuntu1_amd64.deb";sudo rm -rfv $HOME/Unity-XP/chroot/ocs-url*.deb
+sudo chroot $HOME/Unity-XP/chroot sh -c "wget -c https://github.com/rauldipeas/Unity-XP/raw/master/resources/stacer_1.1.0_amd64.deb"
+sudo chroot $HOME/Unity-XP/chroot sh -c "apt install -y ./stacer_1.1.0_amd64.deb";sudo rm -rfv $HOME/Unity-XP/chroot/stacer*.deb
 sudo chroot $HOME/Unity-XP/chroot sh -c "wget -qO- https://raw.githubusercontent.com/Bonandry/yaru-plus/master/install.sh | sh"
 wget -c https://github.com/rauldipeas/Unity-XP/raw/master/resources/GpuTest_Linux_x64_0.7.0.zip
 sudo mkdir -pv $HOME/Unity-XP/chroot/.local/share/applications
