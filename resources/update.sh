@@ -1,5 +1,7 @@
 #!/bin/bash
 
+clear
+
 # AppImageD
 promptyn () {
     while true; do

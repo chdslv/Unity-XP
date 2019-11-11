@@ -95,8 +95,7 @@ O tempo de compilação **pode variar**, _**de acordo com a capacidade de proces
 Após a instalação do sistema, **para se manter em dia com as atualizações _deste projeto_**, será necessário executar o comando _abaixo_:
 
 ```bash
-wget -O- https://github.com/rauldipeas/Unity-XP/raw/master/resources/update.sh | bash -x
-
+bash <(curl -s https://raw.githubusercontent.com/rauldipeas/Unity-XP/master/resources/update.sh)
 ```
 
 ### Extras
