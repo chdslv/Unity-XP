@@ -7,14 +7,3 @@ steps:
     displayName: Instalação de dependências
   - script: bash website/download-counter/download-counter.sh
     displayName: Atualização do contador de downloads
-schedules:
-- cron: "0 0 * * *"
-  displayName: Daily midnight build
-  branches:
-    include:
-    - master
-- cron: "0 12 * * *"
-  displayName: Daily midday build
-  branches:
-    include:
-    - master
