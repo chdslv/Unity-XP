@@ -94,6 +94,7 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y \
     papirus-icon-theme \
     plymouth-theme-ubuntu-logo \
     pulseaudio-module-bluetooth \
+    python-tk \
     rawtherapee \
     redshift-gtk \
     rygel \
@@ -115,6 +116,10 @@ sudo chroot $HOME/Unity-XP/chroot sh -c "apt install -y ./hardinfo_0.5.1+git2019
 sudo chroot $HOME/Unity-XP/chroot sh -c "wget -c https://github.com/rauldipeas/Unity-XP/raw/master/resources/ocs-url_3.1.0-0ubuntu1_amd64.deb"
 sudo chroot $HOME/Unity-XP/chroot sh -c "apt install -y ./ocs-url_3.1.0-0ubuntu1_amd64.deb";sudo rm -rfv $HOME/Unity-XP/chroot/ocs-url*.deb
 sudo chroot $HOME/Unity-XP/chroot sh -c "wget -qO- https://raw.githubusercontent.com/Bonandry/yaru-plus/master/install.sh | sh"
+wget -c https://github.com/rauldipeas/Unity-XP/raw/master/resources/GpuTest_Linux_x64_0.7.0.zip
+sudo mkdir -pv $HOME/Unity-XP/chroot/.local/share/applications
+sudo unzip GpuTest_Linux_x64_0.7.0.zip -d $HOME/Unity-XP/chroot/etc/skel/.local/share/
+sudo wget -cO $HOME/Unity-XP/chroot/etc/skel/.local/share/applications/gputest.desktop https://github.com/rauldipeas/Unity-XP/raw/master/resources/gputest.desktop
 sudo sed -i 's/Humanity/Papirus,Humanity/g' $HOME/Unity-XP/chroot/usr/share/icons/Yaru++/index.theme
 sudo sed -i 's/Humanity/Papirus-Dark,Humanity/g' $HOME/Unity-XP/chroot/usr/share/icons/Yaru++-Dark/index.theme
 sudo chroot $HOME/Unity-XP/chroot sh -c "git clone https://github.com/vinceliuice/vimix-gtk-themes;cd vimix-gtk-themes;./Install"
@@ -200,6 +205,10 @@ set timeout=15
 
 menuentry "Unity XP(live-mode)" {
    linux /casper/vmlinuz boot=casper quiet splash loglevel=0 logo.nologo vt.global_cursor_default=0 mitigations=off locale=pt_BR ---
+   initrd /casper/initrd
+}
+menuentry "Unity XP(live-mode)(nvidia-legacy)" {
+   linux /casper/vmlinuz boot=casper quiet splash loglevel=0 logo.nologo vt.global_cursor_default=0 mitigations=off locale=pt_BR modprobe.blacklist=nvidia,nvidia_uvm,nvidia_drm,nvidia_modeset ---
    initrd /casper/initrd
 }
 EOF

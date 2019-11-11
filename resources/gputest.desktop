@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Name=GpuTest
+Exec=sh -c 'cd ~/.local/share/GpuTest_Linux_x64_0.7.0;python gputest_gui.py'
+Icon=GPU_Viewer
+Terminal=false
+Type=Application
+Categories=System;
+StartupWMClass=tk

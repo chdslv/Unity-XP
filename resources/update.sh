@@ -40,3 +40,25 @@ if promptyn "Você deseja instalar o OCS-URL? (s/n)"; then
 else
   clear
 fi
+
+# GpuTest
+promptyn () {
+    while true; do
+        read -p "$1 " sn
+        case $sn in
+            [Ss]* ) return 0;;
+            [Nn]* ) return 1;;
+            * ) echo "Você deseja instalar o GpuTest? (s/n)";;
+        esac
+    done
+}
+
+if promptyn "Você deseja instalar o GpuTest? (s/n)"; then
+  sudo apt intall -y python-tk
+  wget -c https://github.com/rauldipeas/Unity-XP/raw/master/resources/GpuTest_Linux_x64_0.7.0.zip
+  mkdir -pv $HOME/.local/share/applications
+  unzip GpuTest_Linux_x64_0.7.0.zip -d $HOME/.local/share/;rm GpuTest*.zip
+  wget -cO $HOME/.local/share/applications/gputest.desktop https://github.com/rauldipeas/Unity-XP/raw/master/resources/gputest.desktop
+else
+  clear
+fi
