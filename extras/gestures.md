@@ -1,4 +1,4 @@
-### Gestures
+### [Gestures](https://gitlab.com/cunidev/gestures)
 ```bash
 sudo gpasswd -a $USER input
 sudo apt install -y libinput-tools python3-setuptools wmctrl xdotool
