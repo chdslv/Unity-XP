@@ -43,6 +43,7 @@ a {
 a:hover,
 a:focus,
 a:visited {
+    color: #ffffff;
     outline: none;
 }
 
