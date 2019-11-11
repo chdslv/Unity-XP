@@ -119,7 +119,7 @@ sudo chroot $HOME/Unity-XP/chroot sh -c "wget -c https://github.com/rauldipeas/U
 sudo chroot $HOME/Unity-XP/chroot sh -c "apt install -y ./stacer_1.1.0_amd64.deb";sudo rm -rfv $HOME/Unity-XP/chroot/stacer*.deb
 sudo chroot $HOME/Unity-XP/chroot sh -c "wget -qO- https://raw.githubusercontent.com/Bonandry/yaru-plus/master/install.sh | sh"
 wget -c https://github.com/rauldipeas/Unity-XP/raw/master/resources/GpuTest_Linux_x64_0.7.0.zip
-sudo mkdir -pv $HOME/Unity-XP/chroot/.local/share/applications
+sudo mkdir -pv $HOME/Unity-XP/chroot/etc/skel/.local/share/applications
 sudo unzip GpuTest_Linux_x64_0.7.0.zip -d $HOME/Unity-XP/chroot/etc/skel/.local/share/
 sudo wget -cO $HOME/Unity-XP/chroot/etc/skel/.local/share/applications/gputest.desktop https://github.com/rauldipeas/Unity-XP/raw/master/resources/gputest.desktop
 sudo sed -i 's/Humanity/Papirus,Humanity/g' $HOME/Unity-XP/chroot/usr/share/icons/Yaru++/index.theme
