@@ -4,8 +4,6 @@ O sistema usa como _base_ o [**Ubuntu 19.10**](https://ubuntu.com) e o kernel é
 
 [![**downlad**](resources/download.png)](https://github.com/rauldipeas/Unity-XP/releases)
 
-[![Telegram](resources/telegram.gif)](https://t.me/joinchat/A3a9URCGYk45ruhjP850lQ)
-
 ### Área de trabalho
 ![desktop](screenshots/desktop.png)
 

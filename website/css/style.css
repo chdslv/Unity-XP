@@ -41,8 +41,10 @@ a {
 }
 
 a:hover,
-a:focus {
+a:focus
+a:visited {
     color: #d6619c;
+    outline: none;
 }
 
 h1 {
@@ -201,6 +203,7 @@ p.lead {
 
 .navbar-nav .nav-link {
     position: relative;
+    outline: none;
 }
 
 @media (min-width: 992px) {
@@ -639,4 +642,21 @@ header {
         text-align: center;
         margin-top: 2rem;
     }
+}
+
+.float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 2%;
+  right: 1.3%;
+  z-index: 100;
+}
+
+.my-float {
+  margin-top: 16px;
+}
+
+.shadow {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
 }
