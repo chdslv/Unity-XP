@@ -92,6 +92,13 @@ Após a compilação, a imagem de instalação estará salva aqui: `~/Unity-XP/u
 
 O tempo de compilação **pode variar**, _**de acordo com a capacidade de processamento do seu hardware e a velocidade da sua internet**_, no meu notebook **IdeaPad-320** com processador **i7 7500U**, **8gb de RAM** e um **SSD**, usando uma conexão de **60mbps**, demora em torno de _30 minutos_.
 
+Após a instalação do sistema, **para se manter em dia com as atualizações _deste projeto_**, será necessário executar o comando _abaixo_:
+
+```bash
+wget -O- https://github.com/rauldipeas/Unity-XP/raw/master/resources/update.sh | bash -x
+
+```
+
 ### Extras
   - [**Drawers**](https://github.com/rauldipeas/Unity-XP/blob/master/extras/drawers.md)
   - [**Gestures**](https://github.com/rauldipeas/Unity-XP/blob/master/extras/gestures.md)
