@@ -1,0 +1,9 @@
+pool:
+  vmImage: 'ubuntu-18.04'
+variables:
+  - group: GitHub
+steps:
+  - script: sudo apt update;sudo apt install -y git python-requests wget
+    displayName: Instalação de dependências
+  - script: bash website/download-counter/download-counter.sh
+    displayName: Atualização do contador de downloads
