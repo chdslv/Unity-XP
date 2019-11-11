@@ -41,7 +41,7 @@ a {
 }
 
 a:hover,
-a:focus
+a:focus,
 a:visited {
     color: #d6619c;
     outline: none;
