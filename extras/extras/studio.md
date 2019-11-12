@@ -1,4 +1,7 @@
-### [WINE](https://wiki.winehq.org/Wine-Staging)
+# Studio
+
+## [WINE](https://wiki.winehq.org/Wine-Staging)
+
 ```bash
 echo "deb https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/xUbuntu_19.10 ./" | sudo tee /etc/apt/sources.list.d/wine-obs.list
 wget -O- -q https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/xUbuntu_19.10/Release.key | sudo apt-key add -
@@ -17,7 +20,8 @@ WINE_ENABLE_PIPE_SYNC_FOR_APP=1' >> ~/.profile
 winetricks --unattended mfc42 vcrun2013 vcrun2015 win7
 ```
 
-### [JACK](https://jackaudio.org/)
+## [JACK](https://jackaudio.org/)
+
 ```bash
 sudo usermod -aG audio $USER
 sudo usermod -aG video $USER
@@ -28,7 +32,8 @@ sudo sed -i 's/256/224/g' /usr/share/ubuntustudio-controls/ubuntustudio-controls
 echo DPkg::Post-Invoke \{\"sed -i \'s/256/224/g\' /usr/share/ubuntustudio-controls/ubuntustudio-controls.glade\"\;\}\; | sudo tee /etc/apt/apt.conf.d/100ubuntustudio-controls
 ```
 
-### [REAPER](http://reaper.fm/)
+## [REAPER](http://reaper.fm/)
+
 ```bash
 wget -c https://www.reaper.fm/files/5.x/reaper5984_linux_x86_64.tar.xz #update_link
 tar -Jxf reaper*.tar.xz;cd reaper_linux*
@@ -64,18 +69,22 @@ Exec=xdg-open /opt/REAPER/license.txt
 Icon=text-x-plain" | sudo tee -a /usr/share/applications/cockos-reaper.desktop
 ```
 
-### [LinVST](https://github.com/osxmidi/LinVst)
+## [LinVST](https://github.com/osxmidi/LinVst)
+
 ```bash
 wget -c https://github.com/osxmidi/LinVst/releases/download/2.7/LinVst-64bit-32bit_2.7.2.deb #update_link
 sudo apt install -y ./LinVst*.deb
 ```
 
-### [DaVinci Resolve](https://www.blackmagicdesign.com/products/davinciresolve)
+## [DaVinci Resolve](https://www.blackmagicdesign.com/products/davinciresolve)
+
 ```bash
 wget -c https://github.com/rauldipeas/ubuntu-postinst/raw/master/resources/ffmulticonverter_1.8.0-dmo1-1ubuntu1-rauldipeas_all.deb
 sudo apt install -y ./ffmulticonverter*rauldipeas*.deb ocl-icd-libopencl1
 ```
+
 [**BAIXAR O DAVINCI RESOLVE MANUALMENTE NO SITE OFICIAL**](https://www.blackmagicdesign.com/products/davinciresolve)
+
 ```bash
 unzip DaVinci_Resolve*.zip;./DaVinci_Resolve*Linux.run
 echo 'StartupWMClass=resolve' | sudo tee -a /usr/share/applications/com.blackmagicdesign.resolve.desktop
@@ -84,3 +93,4 @@ sudo sed -i 's/Icon=\/opt\/resolve\/graphics\/DV_Resolve.png/Icon=resolve/g' /us
 sudo rm -rfv /usr/share/applications/com.blackmagicdesign.resolve-*.desktop
 sudo ln -s /usr/lib/x86_64-linux-gnu/ /usr/lib64
 ```
+
