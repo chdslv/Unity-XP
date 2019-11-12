@@ -81,3 +81,21 @@ if promptyn "Você deseja instalar o Stacer? (s/n)"; then
 else
   clear
 fi
+
+# Compiz Plugins
+promptyn () {
+    while true; do
+        read -p "$1 " sn
+        case $sn in
+            [Ss]* ) return 0;;
+            [Nn]* ) return 1;;
+            * ) echo "Você deseja instalar os plugins do Compipz? (s/n)";;
+        esac
+    done
+}
+
+if promptyn "Você deseja instalar os plugins do Compiz? (s/n)"; then
+    sudo apt install -y compiz-plugins
+else
+  clear
+fi

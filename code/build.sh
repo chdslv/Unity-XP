@@ -10,7 +10,6 @@ sudo debootstrap \
 sudo mount --bind /dev $HOME/Unity-XP/chroot/dev
 sudo mount --bind /run $HOME/Unity-XP/chroot/run
 sudo chroot $HOME/Unity-XP/chroot mount none -t proc /proc
-sudo chroot $HOME/Unity-XP/chroot mount none -t proc /proc
 sudo chroot $HOME/Unity-XP/chroot mount none -t devpts /dev/pts
 sudo chroot $HOME/Unity-XP/chroot sh -c "export HOME=/root"
 echo "Unity-XP" | sudo tee $HOME/Unity-XP/chroot/etc/hostname
@@ -39,6 +38,7 @@ sudo chroot $HOME/Unity-XP/chroot sh -c "echo 'resolvconf resolvconf/linkify-res
 sudo chroot $HOME/Unity-XP/chroot apt install -y \
     casper \
     discover \
+    grub-efi-amd64-signed \
     laptop-detect \
     linux-firmware \
     linux-headers-liquorix-amd64 \
@@ -62,7 +62,7 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y \
     audacity \
     breeze-cursor-theme \
     compizconfig-settings-manager \
-    compiz-plugins-extra \
+    compiz-plugins \
     deborphan \
     deluged \
     deluge-gtk \
@@ -162,7 +162,7 @@ sudo chroot $HOME/Unity-XP/chroot truncate -s 0 /etc/machine-id
 sudo chroot $HOME/Unity-XP/chroot rm /sbin/initctl
 sudo chroot $HOME/Unity-XP/chroot dpkg-divert --rename --remove /sbin/initctl
 sudo chroot $HOME/Unity-XP/chroot apt clean
-sudo chroot $HOME/Unity-XP/chroot rm -rf /tmp/* ~/.bash_history
+sudo chroot $HOME/Unity-XP/chroot rm -rfv /tmp/* ~/.bash_history
 sudo chroot $HOME/Unity-XP/chroot umount /proc
 sudo chroot $HOME/Unity-XP/chroot umount /dev/pts
 sudo chroot $HOME/Unity-XP/chroot sh -c "export HISTSIZE=0"
@@ -321,3 +321,4 @@ sudo xorriso \
       "." \
       /boot/grub/bios.img=isolinux/bios.img \
       /EFI/efiboot.img=isolinux/efiboot.img
+md5sum ../unity-xp-19.10-amd64.iso > ../unity-xp-19.10-amd64.md5
