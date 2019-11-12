@@ -79,7 +79,7 @@ sudo apt install -y ./LinVst*.deb
 ## [DaVinci Resolve](https://www.blackmagicdesign.com/products/davinciresolve)
 
 ```bash
-wget -c https://github.com/rauldipeas/ubuntu-postinst/raw/master/resources/ffmulticonverter_1.8.0-dmo1-1ubuntu1-rauldipeas_all.deb
+wget -c https://github.com/rauldipeas/Unity-XP/raw/master/resources/ffmulticonverter_1.8.0-dmo1-1ubuntu1-rauldipeas_all.deb
 sudo apt install -y ./ffmulticonverter*rauldipeas*.deb ocl-icd-libopencl1
 ```
 
@@ -93,4 +93,3 @@ sudo sed -i 's/Icon=\/opt\/resolve\/graphics\/DV_Resolve.png/Icon=resolve/g' /us
 sudo rm -rfv /usr/share/applications/com.blackmagicdesign.resolve-*.desktop
 sudo ln -s /usr/lib/x86_64-linux-gnu/ /usr/lib64
 ```
-

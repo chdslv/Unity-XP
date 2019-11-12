@@ -111,6 +111,7 @@ sudo chroot $HOME/Unity-XP/chroot sh -c "wget -c https://github.com/rauldipeas/U
 sudo chroot $HOME/Unity-XP/chroot sh -c "apt install -y ./appimaged_1-alpha-git0f1c320.travis214_amd64.deb";sudo rm -rfv $HOME/Unity-XP/chroot/appimaged*.deb
 sudo chroot $HOME/Unity-XP/chroot sh -c "wget -c https://az764295.vo.msecnd.net/stable/6ab598523be7a800d7f3eb4d92d7ab9a66069390/code_1.39.2-1571154070_amd64.deb"
 sudo chroot $HOME/Unity-XP/chroot sh -c "apt install -y ./code_1.39.2-1571154070_amd64.deb";sudo rm -rfv $HOME/Unity-XP/chroot/code*.deb
+sudo sed -i 's/inode\/directory=code.desktop;nemo.desktop;/inode\/directory=nemo.desktop;code.desktop;/g' $HOME/Unity-XP/chroot/usr/share/applications/mimeinfo.cache
 sudo chroot $HOME/Unity-XP/chroot sh -c "wget -c https://github.com/rauldipeas/Unity-XP/raw/master/resources/hardinfo_0.5.1+git20191030-1_amd64.deb"
 sudo chroot $HOME/Unity-XP/chroot sh -c "apt install -y ./hardinfo_0.5.1+git20191030-1_amd64.deb";sudo rm -rfv $HOME/Unity-XP/chroot/hardinfo*.deb
 sudo chroot $HOME/Unity-XP/chroot sh -c "wget -c https://github.com/rauldipeas/Unity-XP/raw/master/resources/ocs-url_3.1.0-0ubuntu1_amd64.deb"
