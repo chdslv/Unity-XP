@@ -23,7 +23,7 @@ steps:
   - task: PublishBuildArtifacts@1
     displayName: Upload da imagem de instalação para o Azure Pipeline Artifacts
     inputs:
-      pathtoPublish: /home/vsts/Unity-XP/unity-xp-19.10-amd64.*
+      pathtoPublish: /home/vsts/Unity-XP/unity-xp-19.10-amd64.iso
       artifactName: 'Unity XP ISO'
   - script: bash github-release.sh
     displayName: Upload da imagem de instalação para o GitHub Releases
