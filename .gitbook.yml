@@ -1,5 +1,5 @@
 root: ./extras
 
 structure:
-  readme: readme.md
+  readme: summary.md
   summary: summary.md
