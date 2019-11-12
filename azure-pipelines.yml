@@ -5,6 +5,7 @@ trigger:
     include: [ master ]
   paths:
     exclude:
+      - .gitbook.yml
       - _config.yml
       - netlify.toml
       - readme.md
