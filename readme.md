@@ -105,8 +105,8 @@ bash <(curl -s https://rauldipeas.github.io/Unity-XP/resources/update.sh)
 ```
 
 ### Extras
-  - [**Android Studio**](https://github.com/rauldipeas/Unity-XP/blob/master/extras/android-studio.md)
-  - [**Drawers**](https://github.com/rauldipeas/Unity-XP/blob/master/extras/drawers.md)
-  - [**Gestures**](https://github.com/rauldipeas/Unity-XP/blob/master/extras/gestures.md)
-  - [**PJe Office**](https://github.com/rauldipeas/Unity-XP/blob/master/extras/pjeoffice.md)
-  - [**Studio**](https://github.com/rauldipeas/Unity-XP/blob/master/extras/studio.md)
+  - [**Android Studio**](https://docs.unityxp.tk/extras/android-studio)
+  - [**Drawers**](https://docs.unityxp.tk/extras/drawers)
+  - [**Gestures**](https://docs.unityxp.tk/extras/gestures)
+  - [**PJe Office**](https://docs.unityxp.tk/extras/pjeoffice)
+  - [**Studio**](https://docs.unityxp.tk/extras/studio)
