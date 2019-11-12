@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Unity XP](../readme.md)
+* [Unity eXPerience](../readme.md)
 
 ## Extras
 
