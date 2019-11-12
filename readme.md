@@ -102,6 +102,7 @@ bash <(curl -s https://rauldipeas.github.io/Unity-XP/resources/update.sh)
 
 ### Extras
   - [**Android Studio**](https://docs.unityxp.tk/extras/android-studio)
+  - [**Blender**](https://www.blender.org)
   - [**Drawers**](https://docs.unityxp.tk/extras/drawers)
   - [**Gestures**](https://docs.unityxp.tk/extras/gestures)
   - [**PJe Office**](https://docs.unityxp.tk/extras/pjeoffice)
