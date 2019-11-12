@@ -1,6 +1,6 @@
-# Studio
+### [Studio](http://ubuntustudio.org)
 
-## [WINE](https://wiki.winehq.org/Wine-Staging)
+### [WINE](https://wiki.winehq.org/Wine-Staging)
 
 ```bash
 echo "deb https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/xUbuntu_19.10 ./" | sudo tee /etc/apt/sources.list.d/wine-obs.list
@@ -20,7 +20,7 @@ WINE_ENABLE_PIPE_SYNC_FOR_APP=1' >> ~/.profile
 winetricks --unattended mfc42 vcrun2013 vcrun2015 win7
 ```
 
-## [JACK](https://jackaudio.org/)
+### [JACK](https://jackaudio.org/)
 
 ```bash
 sudo usermod -aG audio $USER
@@ -32,7 +32,7 @@ sudo sed -i 's/256/224/g' /usr/share/ubuntustudio-controls/ubuntustudio-controls
 echo DPkg::Post-Invoke \{\"sed -i \'s/256/224/g\' /usr/share/ubuntustudio-controls/ubuntustudio-controls.glade\"\;\}\; | sudo tee /etc/apt/apt.conf.d/100ubuntustudio-controls
 ```
 
-## [REAPER](http://reaper.fm/)
+### [REAPER](http://reaper.fm/)
 
 ```bash
 wget -c https://www.reaper.fm/files/5.x/reaper5984_linux_x86_64.tar.xz #update_link
@@ -69,14 +69,14 @@ Exec=xdg-open /opt/REAPER/license.txt
 Icon=text-x-plain" | sudo tee -a /usr/share/applications/cockos-reaper.desktop
 ```
 
-## [LinVST](https://github.com/osxmidi/LinVst)
+### [LinVST](https://github.com/osxmidi/LinVst)
 
 ```bash
 wget -c https://github.com/osxmidi/LinVst/releases/download/2.7/LinVst-64bit-32bit_2.7.2.deb #update_link
 sudo apt install -y ./LinVst*.deb
 ```
 
-## [DaVinci Resolve](https://www.blackmagicdesign.com/products/davinciresolve)
+### [DaVinci Resolve](https://www.blackmagicdesign.com/products/davinciresolve)
 
 ```bash
 wget -c https://github.com/rauldipeas/Unity-XP/raw/master/resources/ffmulticonverter_1.8.0-dmo1-1ubuntu1-rauldipeas_all.deb
