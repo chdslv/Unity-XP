@@ -89,13 +89,31 @@ promptyn () {
         case $sn in
             [Ss]* ) return 0;;
             [Nn]* ) return 1;;
-            * ) echo "Você deseja instalar os plugins do Compipz? (s/n)";;
+            * ) echo "Você deseja instalar os plugins do Compiz? (s/n)";;
         esac
     done
 }
 
 if promptyn "Você deseja instalar os plugins do Compiz? (s/n)"; then
     sudo apt install -y compiz-plugins
+else
+  clear
+fi
+
+# Nemo MIME
+promptyn () {
+    while true; do
+        read -p "$1 " sn
+        case $sn in
+            [Ss]* ) return 0;;
+            [Nn]* ) return 1;;
+            * ) echo "Você deseja atualizar as configurações de MIME? (s/n)";;
+        esac
+    done
+}
+
+if promptyn "Você deseja atualizar as configurações de MIME? (s/n)"; then
+  sudo sed -i 's/inode\/directory=code.desktop;nemo.desktop;/inode\/directory=nemo.desktop;code.desktop;/g' /usr/share/applications/mimeinfo.cache
 else
   clear
 fi
