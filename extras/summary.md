@@ -6,7 +6,7 @@
 
 * [Android Studio](android-studio.md)
 * [Blender](blender.md)
-* [Dbeaver](drawers.md)
+* [Dbeaver](dbeaver.md)
 * [Drawers](drawers.md)
 * [Gestures](gestures.md)
 * [Insomnia](insomnia.md)
