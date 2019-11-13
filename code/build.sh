@@ -138,7 +138,7 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y \
     lutris \
     mesa-vulkan-drivers \
     mesa-vulkan-drivers:i386 \
-    nvidia-driver-435 \
+    nvidia-driver-440 \
     steam-installer \
     xboxdrv
 sudo chroot $HOME/Unity-XP/chroot apt autoremove --purge -y eog gnome-shell gnome-terminal libreoffice-math info mutter* nautilus vlc* xterm
