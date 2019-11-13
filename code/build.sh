@@ -38,7 +38,6 @@ sudo chroot $HOME/Unity-XP/chroot sh -c "echo 'resolvconf resolvconf/linkify-res
 sudo chroot $HOME/Unity-XP/chroot apt install -y \
     casper \
     discover \
-    grub-efi-amd64-signed \
     laptop-detect \
     linux-firmware \
     linux-headers-liquorix-amd64 \
