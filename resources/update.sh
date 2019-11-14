@@ -117,3 +117,23 @@ if promptyn "Você deseja atualizar as configurações de MIME? (s/n)"; then
 else
   clear
 fi
+
+# Yaru++ (Papirus Status)
+promptyn () {
+    while true; do
+        read -p "$1 " sn
+        case $sn in
+            [Ss]* ) return 0;;
+            [Nn]* ) return 1;;
+            * ) echo "Você deseja mudar os ícones de status para o tema Papirus? (s/n)";;
+        esac
+    done
+}
+
+if promptyn "Você deseja mudar os ícones de status para o tema Papirus? (s/n)"; then
+  sudo rm -rfv usr/share/icons/Yaru++/status/* /usr/share/icons/Yaru++-Dark/status/*
+  sudo ln -s /usr/share/icons/Papirus/22x22/panel/ /usr/share/icons/Yaru++/status/24
+  sudo ln -s /usr/share/icons/Papirus-Dark/22x22/panel/ /usr/share/icons/Yaru++-Dark/status/24
+else
+  clear
+fi
