@@ -133,7 +133,7 @@ promptyn () {
 if promptyn "Você deseja mudar os ícones de status para o tema Papirus? (s/n)"; then
   sudo rm -rfv usr/share/icons/Yaru++/status/*
   sudo ln -s /usr/share/icons/Papirus/22x22/panel/ /usr/share/icons/Yaru++/status/24
-  settings set org.gnome.desktop.interface icon-theme Yaru++
+  gsettings set org.gnome.desktop.interface icon-theme Yaru++
 else
   clear
 fi
