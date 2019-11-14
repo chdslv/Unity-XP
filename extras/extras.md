@@ -7,6 +7,7 @@ Nos links _abaixo_ você encontra os comandos necessários para instalar aplicat
 * [**DBeaver**](dbeaver.md)
 * [**Drawers**](drawers.md)
 * [**Gestures**](gestures.md)
+* [**Hardcode-tray**](hardcode-tray.md)
 * [**Insomnia**](insomnia.md)
 * [**PJe Office**](pjeoffice.md)
 * [**Studio**](studio.md)
