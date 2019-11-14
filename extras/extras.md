@@ -4,7 +4,7 @@ Nos links _abaixo_ você encontra os comandos necessários para instalar aplicat
 
 * [**Android Studio**](android-studio.md)
 * [**Blender**](blender.md)
-* [**Dbeaver**](dbeaver.md)
+* [**DBeaver**](dbeaver.md)
 * [**Drawers**](drawers.md)
 * [**Gestures**](gestures.md)
 * [**Insomnia**](insomnia.md)
