@@ -1,9 +1,4 @@
-# Table of contents
-
-* [Unity eXPerience](../readme.md)
-* [Extras](extras.md)
-
-## Extras
+### Extras
 
 * [Android Studio](android-studio.md)
 * [Blender](blender.md)
