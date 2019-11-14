@@ -21,6 +21,7 @@ EOF
 sudo chroot $HOME/Unity-XP/chroot dpkg --add-architecture i386
 sudo chroot $HOME/Unity-XP/chroot apt update
 sudo chroot $HOME/Unity-XP/chroot apt install -y software-properties-common
+sudo chroot $HOME/Unity-XP/chroot add-apt-repository -yn ppa:yannubuntu/boot-repair
 sudo chroot $HOME/Unity-XP/chroot add-apt-repository -yn ppa:damentz/liquorix
 sudo chroot $HOME/Unity-XP/chroot add-apt-repository -yn ppa:lutris-team/lutris
 sudo chroot $HOME/Unity-XP/chroot add-apt-repository -y ppa:system76/pop
@@ -65,6 +66,7 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y \
     deborphan \
     deluged \
     deluge-gtk \
+    diodon \
     epiphany-browser \
     fonts-ubuntu \
     gdebi \
@@ -142,6 +144,9 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y \
     nvidia-driver-440 \
     steam-installer \
     xboxdrv
+sudo chroot $HOME/Unity-XP/chroot apt install -y boot-repair
+sudo rm -rfv $HOME/Unity-XP/chroot/et/apt/sources.list.d/yannubuntu-ubuntu-boot-repair* $HOME/Unity-XP/chroot/et/apt/trusted.gpg.d/yannubuntu-ubuntu-boot-repair*
+sudo apt update
 sudo chroot $HOME/Unity-XP/chroot apt autoremove --purge -y eog gnome-shell gnome-terminal libreoffice-math info mutter* nautilus vlc* xterm
 sudo chroot $HOME/Unity-XP/chroot sh -c "deborphan | xargs sudo apt autoremove --purge -y"
 sudo chroot $HOME/Unity-XP/chroot sh -c "deborphan | xargs sudo apt autoremove --purge -y"
@@ -224,6 +229,9 @@ sudo sed -i '/laptop-detect/d' image/casper/filesystem.manifest-desktop
 sudo sed -i '/os-prober/d' image/casper/filesystem.manifest-desktop
 echo "apt-clone
 archdetect-deb
+boot-repair
+boot-sav
+boot-sav-extra
 cifs-utils
 cryptsetup
 cryptsetup-bin
@@ -232,12 +240,15 @@ cryptsetup-run
 dmeventd
 dmraid
 dpkg-repack
+efibootmgr
 finalrd
+gawk
 gir1.2-json-1.0
 gir1.2-nm-1.0
 gir1.2-nma-1.0
 gir1.2-timezonemap-1.0
 gir1.2-xkl-1.0
+glade2script
 gparted
 kpartx
 kpartx-boot
@@ -251,12 +262,15 @@ libgtkmm-2.4-1v5
 liblvm2cmd2.03
 libpangomm-1.4-1v5
 libreadline5
+libsigsegv2
 libusb-0.1-4
 localechooser-data
 lvm2
+pastebinit
 python3-icu
 python3-pam
 rdate
+syslinux-common
 thin-provisioning-tools
 ubiquity
 ubiquity-casper

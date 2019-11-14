@@ -137,3 +137,21 @@ if promptyn "Você deseja mudar os ícones de status para o tema Papirus? (s/n)"
 else
   clear
 fi
+
+# Diodon
+promptyn () {
+    while true; do
+        read -p "$1 " sn
+        case $sn in
+            [Ss]* ) return 0;;
+            [Nn]* ) return 1;;
+            * ) echo "Você deseja instalar o Diodon? (s/n)";;
+        esac
+    done
+}
+
+if promptyn "Você deseja instalar o Diodon? (s/n)"; then
+  sudo apt install -y diodon
+else
+  clear
+fi
