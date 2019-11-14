@@ -1,4 +1,4 @@
-### Extras
+### Aplicativos adicionais
 
 Nos links _abaixo_ você encontra os comandos necessários para instalar aplicativos _adicionais_ no **Unity XP**.
 
