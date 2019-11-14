@@ -32,7 +32,7 @@ O sistema usa como _base_ o [**Ubuntu 19.10**](https://ubuntu.com) e o kernel é
  - [Activity Log Manager](https://launchpad.net/activity-log-manager)
  - [AppImageD](https://github.com/AppImage/appimaged)
  - [Audacity](https://www.audacityteam.org/)
- - [Boot Repair](https://sourceforge.net/projects/boot-repair/)
+ - [Boot Repair**(live-mode)**](https://sourceforge.net/projects/boot-repair/)
  - [CompizConfig Settings Manager](https://en.wikipedia.org/wiki/Compiz)
  - [Diodon](https://launchpad.net/diodon)
  - [Disks](https://wiki.gnome.org/Apps/Disks)
