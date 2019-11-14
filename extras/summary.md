@@ -1,7 +1,7 @@
 # Table of contents
 
 * [Unity eXPerience](../readme.md)
-* [Extras](extras.md)
+* [Aplicativos adicionais](extras.md)
 
 ## Extras
 
