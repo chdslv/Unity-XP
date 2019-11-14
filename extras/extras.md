@@ -1,6 +1,6 @@
 ### Extras
 
-Nos links _abaixo_ você encontra os comandos necessários para instalar aplicativos _adicionais_ ao **Unity XP**.
+Nos links _abaixo_ você encontra os comandos necessários para instalar aplicativos _adicionais_ no **Unity XP**.
 
 * [**Android Studio**](android-studio.md)
 * [**Blender**](blender.md)
