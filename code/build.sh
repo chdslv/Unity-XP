@@ -38,11 +38,11 @@ sudo chroot $HOME/Unity-XP/chroot sh -c "echo 'locales locales/default_environme
 sudo chroot $HOME/Unity-XP/chroot sh -c "echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections"
 sudo chroot $HOME/Unity-XP/chroot sh -c "echo 'resolvconf resolvconf/linkify-resolvconf boolean false' | debconf-set-selections"
 sudo chroot $HOME/Unity-XP/chroot apt install -y \
-    aufs-tools \
     casper \
     discover \
     laptop-detect \
     linux-firmware \
+    linux-generic \
     linux-xanmod \
     locales \
     lupin-casper \
@@ -201,8 +201,8 @@ sudo sed -i 's/us/br/g' $HOME/Unity-XP/chroot/etc/default/keyboard
 sudo sed -i 's/inode\/directory=code.desktop;nemo.desktop;/inode\/directory=nemo.desktop;code.desktop;/g' $HOME/Unity-XP/chroot/usr/share/applications/mimeinfo.cache
 cd $HOME/Unity-XP
 mkdir -p image/{casper,isolinux,install}
-sudo cp chroot/boot/vmlinuz* image/casper/vmlinuz
-sudo cp chroot/boot/`ls -t1 chroot/boot |  head -n 1` image/casper/initrd
+sudo cp chroot/boot/vmlinuz*generic* image/casper/vmlinuz
+sudo cp chroot/boot/`ls -t1 chroot/boot/*generic* |  head -n 1` image/casper/initrd
 touch image/Ubuntu
 cat <<EOF > image/isolinux/grub.cfg
 
