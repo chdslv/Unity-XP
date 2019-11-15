@@ -21,8 +21,9 @@ EOF
 sudo chroot $HOME/Unity-XP/chroot dpkg --add-architecture i386
 sudo chroot $HOME/Unity-XP/chroot apt update
 sudo chroot $HOME/Unity-XP/chroot apt install -y software-properties-common
+echo 'deb http://deb.xanmod.org releases main' | sudo tee $HOME/Unity-XP/chroot/etc/apt/sources.list.d/xanmod-kernel.list
+wget -O- https://dl.xanmod.org/gpg.key | gpg --dearmor | sudo tee $HOME/Unity-XP/chroot/etc/apt/trusted.gpg.d/xanmod-kernel.gpg
 sudo chroot $HOME/Unity-XP/chroot add-apt-repository -yn ppa:yannubuntu/boot-repair
-sudo chroot $HOME/Unity-XP/chroot add-apt-repository -yn ppa:damentz/liquorix
 sudo chroot $HOME/Unity-XP/chroot add-apt-repository -yn ppa:lutris-team/lutris
 sudo chroot $HOME/Unity-XP/chroot add-apt-repository -y ppa:system76/pop
 sudo chroot $HOME/Unity-XP/chroot add-apt-repository -yn ppa:oibaf/graphics-drivers
@@ -41,8 +42,7 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y \
     discover \
     laptop-detect \
     linux-firmware \
-    linux-headers-liquorix-amd64 \
-    linux-image-liquorix-amd64 \
+    linux-xanmod \
     locales \
     lupin-casper \
     net-tools \

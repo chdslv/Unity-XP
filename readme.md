@@ -1,6 +1,6 @@
 O **Unity eXPerience** é um projeto de prova de conceito, que visa a possibilidade de usar o ambiente gráfico [**Unity**](https://en.wikipedia.org/wiki/Unity_%28user_interface%29) na última versão disponível do _**Ubuntu**_.
 
-O sistema usa como _base_ o [**Ubuntu 19.10**](https://ubuntu.com) e o kernel é o [**Liquorix**](https://liquorix.net/).
+O sistema usa como _base_ o [**Ubuntu 19.10**](https://ubuntu.com) e o kernel é o [**XanMod**](https://xanmod.org/).
 
 [![**downlad**](resources/download.png)](https://github.com/rauldipeas/Unity-XP/releases)
 
@@ -18,7 +18,7 @@ O sistema usa como _base_ o [**Ubuntu 19.10**](https://ubuntu.com) e o kernel é
 
 ### Características
  - [**Ubuntu 19.10**](https://ubuntu.com)
- - Kernel [**Liquorix**](https://liquorix.net/)
+ - Kernel [**XanMod**](https://xanmod.org/)
  - [**ZRAM**](https://en.wikipedia.org/wiki/Zram)
  - [`limits.conf`](https://github.com/rauldipeas/Unity-XP/blob/master/code/settings/limits.conf) otimizado
  - [`sysctl.conf`](https://github.com/rauldipeas/Unity-XP/blob/master/code/settings/sysctl.conf) otimizado
