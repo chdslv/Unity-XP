@@ -125,7 +125,7 @@ sudo wget -cO $HOME/Unity-XP/chroot/etc/skel/.local/share/applications/gputest.d
 sudo chroot $HOME/Unity-XP/chroot sh -c "wget -qO- https://raw.githubusercontent.com/Bonandry/yaru-plus/master/install.sh | sh"
 sudo sed -i 's/Humanity/Papirus,Humanity/g' $HOME/Unity-XP/chroot/usr/share/icons/Yaru++/index.theme
 sudo rm -rfv $HOME/Unity-XP/chroot/usr/share/icons/Yaru++/status/*
-sudo chroot $HOME/Unity-XP/chroot sh -c "ln -s /usr/share/icons/Papirus/22x22/panel/ /usr/share/icons/Yaru++/status/24"
+sudo chroot $HOME/Unity-XP/chroot sh -c "ln -sv /usr/share/icons/Papirus/22x22/panel/ /usr/share/icons/Yaru++/status/24"
 sudo chroot $HOME/Unity-XP/chroot sh -c "git clone https://github.com/vinceliuice/vimix-gtk-themes;cd vimix-gtk-themes;./Install"
 sudo chroot $HOME/Unity-XP/chroot sh -c "git clone https://github.com/vinceliuice/vimix-kde"
 sudo chroot $HOME/Unity-XP/chroot sh -c "cp -rfv vimix-kde/color-schemes/Vimix* /usr/share/color-schemes/"
