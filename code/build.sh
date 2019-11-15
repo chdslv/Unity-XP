@@ -145,7 +145,7 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y \
     steam-installer \
     xboxdrv
 sudo chroot $HOME/Unity-XP/chroot apt install -y boot-repair
-sudo rm -rfv $HOME/Unity-XP/chroot/et/apt/sources.list.d/yannubuntu-ubuntu-boot-repair* $HOME/Unity-XP/chroot/et/apt/trusted.gpg.d/yannubuntu-ubuntu-boot-repair*
+sudo rm -rfv $HOME/Unity-XP/chroot/etc/apt/sources.list.d/yannubuntu-ubuntu-boot-repair* $HOME/Unity-XP/chroot/etc/apt/trusted.gpg.d/yannubuntu-ubuntu-boot-repair*
 sudo apt update
 sudo chroot $HOME/Unity-XP/chroot apt autoremove --purge -y eog gnome-shell gnome-terminal libreoffice-math info mutter* nautilus vlc* xterm
 sudo chroot $HOME/Unity-XP/chroot sh -c "deborphan | xargs sudo apt autoremove --purge -y"
