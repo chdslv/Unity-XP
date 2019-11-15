@@ -38,6 +38,7 @@ sudo chroot $HOME/Unity-XP/chroot sh -c "echo 'locales locales/default_environme
 sudo chroot $HOME/Unity-XP/chroot sh -c "echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections"
 sudo chroot $HOME/Unity-XP/chroot sh -c "echo 'resolvconf resolvconf/linkify-resolvconf boolean false' | debconf-set-selections"
 sudo chroot $HOME/Unity-XP/chroot apt install -y \
+    aufs-tools \
     casper \
     discover \
     laptop-detect \
