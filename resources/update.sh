@@ -156,3 +156,24 @@ if promptyn "Você deseja instalar o Diodon? (s/n)"; then
 else
   clear
 fi
+
+# XanMod
+promptyn () {
+    while true; do
+        read -p "$1 " sn
+        case $sn in
+            [Ss]* ) return 0;;
+            [Nn]* ) return 1;;
+            * ) echo "Você deseja instalar o kernel XanMod? (s/n)";;
+        esac
+    done
+}
+
+if promptyn "Você deseja instalar o kernel XanMod? (s/n)"; then
+  echo 'deb http://deb.xanmod.org releases main' | sudo tee /etc/apt/sources.list.d/xanmod-kernel.list
+  wget -O- https://dl.xanmod.org/gpg.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/xanmod-kernel.gpg
+  sudo apt update
+  sudo apt install -y linux-xanmod
+else
+  clear
+fi
