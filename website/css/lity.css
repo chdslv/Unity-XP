@@ -24,6 +24,7 @@
   opacity: 0;
 }
 .lity * {
+  border-radius: 6px;
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
           box-sizing: border-box;
@@ -105,6 +106,7 @@
   width: auto;
   height: auto;
   z-index: -1;
+  border-radius: 6px;
   -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
           box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
 }
