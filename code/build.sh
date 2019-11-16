@@ -21,10 +21,10 @@ EOF
 sudo chroot $HOME/Unity-XP/chroot dpkg --add-architecture i386
 sudo chroot $HOME/Unity-XP/chroot apt update
 sudo chroot $HOME/Unity-XP/chroot apt install -y software-properties-common
-echo 'deb http://deb.xanmod.org releases main' | sudo tee $HOME/Unity-XP/chroot/etc/apt/sources.list.d/xanmod-kernel.list
-wget -O- https://dl.xanmod.org/gpg.key | gpg --dearmor | sudo tee $HOME/Unity-XP/chroot/etc/apt/trusted.gpg.d/xanmod-kernel.gpg
 sudo chroot $HOME/Unity-XP/chroot add-apt-repository -yn ppa:yannubuntu/boot-repair
 sudo chroot $HOME/Unity-XP/chroot add-apt-repository -yn ppa:lutris-team/lutris
+echo 'deb http://deb.xanmod.org releases main' | sudo tee $HOME/Unity-XP/chroot/etc/apt/sources.list.d/xanmod-kernel.list
+wget -O- https://dl.xanmod.org/gpg.key | gpg --dearmor | sudo tee $HOME/Unity-XP/chroot/etc/apt/trusted.gpg.d/xanmod-kernel.gpg
 sudo chroot $HOME/Unity-XP/chroot add-apt-repository -y ppa:system76/pop
 sudo chroot $HOME/Unity-XP/chroot add-apt-repository -yn ppa:oibaf/graphics-drivers
 sudo chroot $HOME/Unity-XP/chroot apt install -y systemd-sysv
@@ -42,7 +42,6 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y \
     discover \
     laptop-detect \
     linux-firmware \
-    linux-generic \
     linux-xanmod \
     locales \
     lupin-casper \
@@ -148,7 +147,6 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y \
 sudo chroot $HOME/Unity-XP/chroot apt install -y boot-repair
 sudo rm -rfv $HOME/Unity-XP/chroot/etc/apt/sources.list.d/yannubuntu-ubuntu-boot-repair* $HOME/Unity-XP/chroot/etc/apt/trusted.gpg.d/yannubuntu-ubuntu-boot-repair*
 sudo sed -i 's/\/usr\/share\/boot-sav\/x-boot-repair.png/grub-customizer/g' $HOME/Unity-XP/chroot/usr/share/applications/boot-repair.desktop
-sudo apt update
 sudo chroot $HOME/Unity-XP/chroot apt autoremove --purge -y eog gnome-shell gnome-terminal libreoffice-math info mutter* nautilus vlc* xterm
 sudo chroot $HOME/Unity-XP/chroot sh -c "deborphan | xargs sudo apt autoremove --purge -y"
 sudo chroot $HOME/Unity-XP/chroot sh -c "deborphan | xargs sudo apt autoremove --purge -y"
@@ -199,10 +197,11 @@ sudo cp -rfv code/settings/config.xml $HOME/Unity-XP/chroot/etc/skel/.config/oli
 sudo cp -rfv code/settings/qt5ct.conf $HOME/Unity-XP/chroot/etc/skel/.config/qt5ct/qt5ct.conf
 sudo sed -i 's/us/br/g' $HOME/Unity-XP/chroot/etc/default/keyboard
 sudo sed -i 's/inode\/directory=code.desktop;nemo.desktop;/inode\/directory=nemo.desktop;code.desktop;/g' $HOME/Unity-XP/chroot/usr/share/applications/mimeinfo.cache
+sudo chroot $HOME/Unity-XP/chroot sh -c "update-initramfs -u -k \`ls -t1 /boot/vmlinuz* |  head -n 1 | sed 's/\/boot\/vmlinuz-//g'\`"
 cd $HOME/Unity-XP
 mkdir -p image/{casper,isolinux,install}
-sudo cp chroot/boot/vmlinuz*generic* image/casper/vmlinuz
-sudo cp chroot/boot/`ls -t1 chroot/boot/*generic* |  head -n 1` image/casper/initrd
+sudo cp chroot/boot/vmlinuz* image/casper/vmlinuz
+sudo cp chroot/boot/`ls -t1 chroot/boot/ |  head -n 1` image/casper/initrd
 touch image/Ubuntu
 cat <<EOF > image/isolinux/grub.cfg
 
