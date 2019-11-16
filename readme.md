@@ -34,6 +34,7 @@ O sistema usa como _base_ o [**Ubuntu 19.10**](https://ubuntu.com) e o kernel é
  - [Audacity](https://www.audacityteam.org/)
  - [Boot Repair **(live-mode)**](https://sourceforge.net/projects/boot-repair/)
  - [CompizConfig Settings Manager](https://en.wikipedia.org/wiki/Compiz)
+ - [Crow Translate](https://crow-translate.github.io/)
  - [Diodon](https://launchpad.net/diodon)
  - [Disks](https://wiki.gnome.org/Apps/Disks)
  - [Epiphany(Web)](https://wiki.gnome.org/Apps/Web)

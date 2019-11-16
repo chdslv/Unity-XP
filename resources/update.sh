@@ -177,3 +177,22 @@ if promptyn "Você deseja instalar o kernel XanMod? (s/n)"; then
 else
   clear
 fi
+
+# Crow Translate
+promptyn () {
+    while true; do
+        read -p "$1 " sn
+        case $sn in
+            [Ss]* ) return 0;;
+            [Nn]* ) return 1;;
+            * ) echo "Você deseja instalar o Crow Translate? (s/n)";;
+        esac
+    done
+}
+
+if promptyn "Você deseja instalar o Crow Translate? (s/n)"; then
+  wget -c https://github.com/crow-translate/crow-translate/releases/download/2.2.3/crow-translate-2.2.3-amd64.deb
+  sudo apt install -y ./crow-translate-2.2.3-amd64.deb;rm -rfv crow-translate*.deb
+else
+  clear
+fi
