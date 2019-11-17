@@ -151,7 +151,7 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y \
 sudo chroot $HOME/Unity-XP/chroot apt install -y boot-repair
 sudo rm -rfv $HOME/Unity-XP/chroot/etc/apt/sources.list.d/yannubuntu-ubuntu-boot-repair* $HOME/Unity-XP/chroot/etc/apt/trusted.gpg.d/yannubuntu-ubuntu-boot-repair*
 sudo sed -i 's/\/usr\/share\/boot-sav\/x-boot-repair.png/grub-customizer/g' $HOME/Unity-XP/chroot/usr/share/applications/boot-repair.desktop
-sudo chroot $HOME/Unity-XP/chroot apt autoremove --purge -y dmz-cursor-theme doc-base eog gnome-session-canberra gnome-shell gnome-terminal info libreoffice-math libyelp* metacity mutter* nautilus vlc* xterm yelp* zenity*
+sudo chroot $HOME/Unity-XP/chroot apt autoremove --purge -y dmz-cursor-theme doc-base eog gnome-session-canberra gnome-shell gnome-terminal info libreoffice-math libyelp* metacity mutter* nautilus vlc* xterm yelp*
 sudo chroot $HOME/Unity-XP/chroot sh -c "deborphan | xargs sudo apt autoremove --purge -y"
 sudo chroot $HOME/Unity-XP/chroot sh -c "deborphan | xargs sudo apt autoremove --purge -y"
 sudo chroot $HOME/Unity-XP/chroot sh -c "deborphan | xargs sudo apt autoremove --purge -y"
