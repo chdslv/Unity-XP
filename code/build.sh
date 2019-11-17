@@ -53,6 +53,7 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y \
     wireless-tools
 sudo chroot $HOME/Unity-XP/chroot apt install -y --no-install-recommends \
     gnome-mpv \
+    lightdm-gtk-greeter-settings \
     qt5ct \
     qt5-style-kvantum \
     qt5-style-kvantum-l10n \
@@ -68,6 +69,7 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y \
     deluge-gtk \
     diodon \
     epiphany-browser \
+    fonts-emojione \
     fonts-ubuntu \
     gdebi \
     gimp \
@@ -149,7 +151,7 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y \
 sudo chroot $HOME/Unity-XP/chroot apt install -y boot-repair
 sudo rm -rfv $HOME/Unity-XP/chroot/etc/apt/sources.list.d/yannubuntu-ubuntu-boot-repair* $HOME/Unity-XP/chroot/etc/apt/trusted.gpg.d/yannubuntu-ubuntu-boot-repair*
 sudo sed -i 's/\/usr\/share\/boot-sav\/x-boot-repair.png/grub-customizer/g' $HOME/Unity-XP/chroot/usr/share/applications/boot-repair.desktop
-sudo chroot $HOME/Unity-XP/chroot apt autoremove --purge -y eog gnome-shell gnome-terminal libreoffice-math info mutter* nautilus vlc* xterm
+sudo chroot $HOME/Unity-XP/chroot apt autoremove --purge -y dmz-cursor-theme doc-base eog gnome-session-canberra gnome-shell gnome-terminal info libreoffice-math libyelp* metacity mutter* nautilus vlc* xterm yelp* zenity*
 sudo chroot $HOME/Unity-XP/chroot sh -c "deborphan | xargs sudo apt autoremove --purge -y"
 sudo chroot $HOME/Unity-XP/chroot sh -c "deborphan | xargs sudo apt autoremove --purge -y"
 sudo chroot $HOME/Unity-XP/chroot sh -c "deborphan | xargs sudo apt autoremove --purge -y"
@@ -182,6 +184,7 @@ sudo cp -rfv code/settings/nvidia-drm.conf $HOME/Unity-XP/chroot/lib/modprobe.d/
 sudo cp -rfv code/settings/limits.conf $HOME/Unity-XP/chroot/etc/security/limits.d/rauldipeas.conf
 sudo cp -rfv code/settings/sysctl.conf $HOME/Unity-XP/chroot/etc/sysctl.d/rauldipeas.conf
 sudo cp -rfv code/settings/nvidia-composite.desktop $HOME/Unity-XP/chroot/etc/xdg/autostart/nvidia-composite.desktop
+sudo cp -rfv code/settings/lightdm-gtk-greeter.conf $HOME/Unity-XP/chroot/etc/lightdm/lightdm-gtk-greeter.conf
 sudo cp -rfv code/settings/99qt5ct.conf $HOME/Unity-XP/chroot/etc/environment.d/99qt5ct.conf
 sudo mkdir -p $HOME/Unity-XP/chroot/etc/skel/.config/{dconf,Kvantum,qt5ct,olivevideoeditor.org/Olive}
 sudo cp -rfv $HOME/Unity-XP/chroot/usr/share/applications/appimaged*.desktop $HOME/Unity-XP/chroot/etc/xdg/autostart/
