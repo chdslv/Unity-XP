@@ -76,6 +76,7 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y \
 # Ambiente gráfico sem os extras recomendados
 sudo chroot $HOME/Unity-XP/chroot apt install -y --no-install-recommends \
     gnome-mpv \
+    lightdm-gtk-greeter-settings \
     qt5ct \
     qt5-style-kvantum \
     qt5-style-kvantum-l10n \
@@ -93,6 +94,7 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y \
     deluge-gtk \
     diodon \
     epiphany-browser \
+    fonts-emojione \
     fonts-ubuntu \
     gdebi \
     gimp \
@@ -166,6 +168,7 @@ sudo chroot $HOME/Unity-XP/chroot sh -c "wget -qO- https://raw.githubusercontent
 sudo rm -rfv $HOME/Unity-XP/chroot/usr/share/icons/Yaru++/status/*
 sudo chroot $HOME/Unity-XP/chroot sh -c "ln -sv /usr/share/icons/Papirus/22x22/panel/ /usr/share/icons/Yaru++/status/24"
 sudo chroot $HOME/Unity-XP/chroot sh -c "sed -i 's/Yaru,/Papirus,/g' /usr/share/icons/Yaru++/index.theme"
+sudo sed -i 's/Yaru,/Yaru,Papirus,/g' $HOME/Unity-XP/chroot/usr/share/icons/Yaru++/index.theme
 # Vimix GTK
 sudo chroot $HOME/Unity-XP/chroot sh -c "git clone https://github.com/vinceliuice/vimix-gtk-themes;cd vimix-gtk-themes;./Install"
 sudo chroot $HOME/Unity-XP/chroot sh -c "git clone https://github.com/vinceliuice/vimix-kde"
@@ -197,9 +200,9 @@ sudo chroot $HOME/Unity-XP/chroot apt install -y \
 sudo chroot $HOME/Unity-XP/chroot apt install -y boot-repair
 sudo rm -rfv $HOME/Unity-XP/chroot/etc/apt/sources.list.d/yannubuntu-ubuntu-boot-repair* $HOME/Unity-XP/chroot/etc/apt/trusted.gpg.d/yannubuntu-ubuntu-boot-repair*
 sudo sed -i 's/\/usr\/share\/boot-sav\/x-boot-repair.png/grub-customizer/g' $HOME/Unity-XP/chroot/usr/share/applications/boot-repair.desktop
-
 # Remoção de pacotes desnecessários
 sudo chroot $HOME/Unity-XP/chroot apt autoremove --purge -y eog gnome-shell gnome-terminal libreoffice-math info mutter* nautilus vlc* xterm
+sudo chroot $HOME/Unity-XP/chroot apt autoremove --purge -y dmz-cursor-theme doc-base eog gnome-session-canberra gnome-shell gnome-terminal info libreoffice-math libyelp* mutter* nautilus vlc* xterm yelp*
 sudo chroot $HOME/Unity-XP/chroot sh -c "deborphan | xargs sudo apt autoremove --purge -y"
 sudo chroot $HOME/Unity-XP/chroot sh -c "deborphan | xargs sudo apt autoremove --purge -y"
 sudo chroot $HOME/Unity-XP/chroot sh -c "deborphan | xargs sudo apt autoremove --purge -y"
@@ -239,8 +242,9 @@ sudo cp -rfv code/settings/limits.conf $HOME/Unity-XP/chroot/etc/security/limits
 sudo cp -rfv code/settings/sysctl.conf $HOME/Unity-XP/chroot/etc/sysctl.d/rauldipeas.conf
 sudo cp -rfv code/settings/nvidia-drm.conf $HOME/Unity-XP/chroot/lib/modprobe.d/nvidia-drm.conf
 sudo cp -rfv code/settings/nvidia-composite.desktop $HOME/Unity-XP/chroot/etc/xdg/autostart/nvidia-composite.desktop
-
 # Configurações do Qt5
+sudo cp -rfv code/settings/lightdm-gtk-greeter.conf $HOME/Unity-XP/chroot/etc/lightdm/lightdm-gtk-greeter.conf
+sudo cp -rfv code/settings/99qt5ct.conf $HOME/Unity-XP/chroot/etc/environment.d/99qt5ct.conf
 sudo mkdir -p $HOME/Unity-XP/chroot/etc/skel/.config/{dconf,Kvantum,qt5ct,olivevideoeditor.org/Olive}
 sudo cp -rfv code/settings/kvantum.kvconfig $HOME/Unity-XP/chroot/etc/skel/.config/Kvantum/kvantum.kvconfig
 sudo cp -rfv code/settings/config.xml $HOME/Unity-XP/chroot/etc/skel/.config/olivevideoeditor.org/Olive/config.xml

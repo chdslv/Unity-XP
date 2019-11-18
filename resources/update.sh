@@ -131,7 +131,8 @@ promptyn () {
 }
 
 if promptyn "Você deseja mudar os ícones de status para o tema Papirus? (s/n)"; then
-  sudo sed -i 's/Yaru/Papirus/g' /usr/share/icons/Yaru++/index.theme
+  sudo sed -i 's/Papirus/Yaru/g' /usr/share/icons/Yaru++/index.theme
+  sudo sed -i 's/Yaru,/Papirus,/g' /usr/share/icons/Yaru++/index.theme
   sudo rm -rfv /usr/share/icons/Yaru++/status/*
   sudo ln -s /usr/share/icons/Papirus/22x22/panel/ /usr/share/icons/Yaru++/status/24
   gsettings set org.gnome.desktop.interface icon-theme Yaru++
@@ -193,6 +194,43 @@ promptyn () {
 if promptyn "Você deseja instalar o Crow Translate? (s/n)"; then
   wget -c https://github.com/crow-translate/crow-translate/releases/download/2.2.3/crow-translate-2.2.3-amd64.deb
   sudo apt install -y ./crow-translate-2.2.3-amd64.deb;rm -rfv crow-translate*.deb
+else
+  clear
+fi
+
+# Light GTK Greeter
+promptyn () {
+    while true; do
+        read -p "$1 " sn
+        case $sn in
+            [Ss]* ) return 0;;
+            [Nn]* ) return 1;;
+            * ) echo "Você deseja mudar o greeter do LightDM para o GTK? (s/n)";;
+        esac
+    done
+}
+
+if promptyn "Você deseja mudar o greeter do LightDM para o GTK? (s/n)"; then
+  sudo apt install -y lightdm-gtk-greeter-settings
+  sudo wget -O /etc/lightdm/lightdm-gtk-greeter.conf https://github.com/rauldipeas/Unity-XP/raw/master/code/settings/lightdm-gtk-greeter.conf
+else
+  clear
+fi
+
+# Fonts EmojiOne
+promptyn () {
+    while true; do
+        read -p "$1 " sn
+        case $sn in
+            [Ss]* ) return 0;;
+            [Nn]* ) return 1;;
+            * ) echo "Você deseja instalar o suporte à emojis? (s/n)";;
+        esac
+    done
+}
+
+if promptyn "Você deseja instalar o suporte à emojis? (s/n)"; then
+  sudo apt install -y fonts-emojione
 else
   clear
 fi
