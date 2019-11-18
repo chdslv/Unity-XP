@@ -15,3 +15,4 @@
 * [PJe Office](pjeoffice.md)
 * [Studio](studio.md)
 * [Ubuntu Make](ubuntu-make.md)
+* [WINE Staging](wine-staging.md)
