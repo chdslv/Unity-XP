@@ -2,6 +2,7 @@
 
 * [Unity eXPerience](../readme.md)
 * [Integração automática de AppImage](appimage-install.md)
+* [Jogos](jogos.md)
 
 ## Extras
 
