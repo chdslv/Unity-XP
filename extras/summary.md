@@ -1,7 +1,6 @@
 # Table of contents
 
 * [Unity eXPerience](../readme.md)
-* [Programas inclusos](apps.md)
 * [Integração automática de AppImage](appimage-install.md)
 * [Programas adicionais](extras.md)
 
